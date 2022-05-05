@@ -5,49 +5,27 @@ from django.http import HttpResponse
 
 
 def index(request):
-    #if 'search_filter' in request.GET:
-        #search_filter = request.GET('search_filter')
-        #items = [ {
-         #   'id': x.id,
-        #    'name': x.name,
-        #    'description': x.description
-        #} for x in Item.objects.filter(name__icontains=search_filter) ]
-        #return JsonResponse({ 'data': items })
-    #context = { 'items': Item.objects.all().order_by('name') }
     return render(request, 'user/index.html')
 
-#def get_item_by_id(request, id):
-    #return render(request, 'item/item_details.html', {
-    #    'item': get_object_or_404(Item, pk=id)
-    #})
+#def register(request):
+#    if request.method == 'POST':
+#        form = UserCreationForm(data=request.POST)
+#        if form.is_valid():
+#            form.save()
+#            return redirect('login')
+#    return render(request, 'user/register.html', {
+#        'form': UserCreationForm()
+#    })
 
-#def create_item(request):
-    #if request.method == 'POST':
-        #form = ItemCreateForm(data=request.POST)
-        #if form.is_valid():
-            #item = form.save()
-            #return redirect('item-index')
-    #else:
-        #form = ItemCreateForm()
-    #return render(request, 'item/create_item.html', {
-        #'form': form
-    #})
-
-#def delete_item(request, id):
-    #item = get_object_or_404(Item, pk=id)
-    #item.delete()
-    #return redirect('item-index')
-
-#def update_item(request, id):
-    #instance = get_object_or_404(Item, pk=id)
-    #if request.method == 'POST':
-        #form = ItemUpdateForm(data=request.POST, instance=instance)
-        #if form.is_valid():
-            #form.save()
-            #return redirect('item_details', id=id)
-    #else:
-        #form = ItemUpdateForm(instance=instance)
-    #return render(request, 'item/item_update.html', {
-        #'form': form,
-        #'id': id
-    #})
+#def profile(request):
+#    profile = Profile.objects.filter(user=request.user).first()
+#    if request.method == 'POST':
+#        form = ProfileForm(instance=profile, data=request.POST)
+#        if form.is_valid():
+#            profile = form.save(commit=False)
+#            profile.user = request.user
+#            profile.save()
+#            return redirect('profile')
+#    return render(request, 'user/profile.html', {
+#        'form': ProfileForm(instance=profile)
+#    })
