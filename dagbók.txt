@@ -1,0 +1,45 @@
+Vika 2
+
+Mánudagur:
+Horfa á öll myndböndin í modules, prufa sig áfram með django frameworkið og finna fyrir smá öryggi.
+
+
+Þriðjudagur:
+Taka ákvarðanir um það hvernig við viljum byggja frameworkið út frá hönnunum sem við gerðum í viku 1.
+Þurfum við að gera hönnunarbreytingar og fleira.
+Byrja uppsetninguna á verkefninu okkar.
+
+
+Miðvikudagur:
+Skipta niður verkefnum út frá ákvörðum frá þriðjudegi.
+
+
+Fimmtudagur:
+Hvað þarf að gera:
+- Navigation.html
+	- logo
+	- fire sale home takki
+	- ehv fleira að bæta við ?
+- main.css
+	- navigation bar
+	- search bar
+	- bæta overall look
+	- ehv fleira til að bæta við ?
+- user.views.index
+- item.views.index
+- item.views.get_item_by_id
+- item.views.create_item
+- item.views.delete_item
+- item.views.update_item
+- item.urls
+	- bæta við góðum paths
+- user.urls
+	- bæta við góðum paths
+- user.views
+
+Föstudagur:
+
+
+VITAL POINTS:
+Hvað viljum við fara langt?
+Á hvað viljum við setja mestu athyglina.
