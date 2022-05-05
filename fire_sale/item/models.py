@@ -7,9 +7,9 @@ class ItemCategory(models.Model):
 class Item(models.Model):
     name = models.CharField(max_length=255)
     description = models.CharField(max_length=255, blank=True)
-    category = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
     price = models.FloatField()
-    on_sale = models.BooleanField()
+    category_id = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
+    seller_username = models.CharField(max_length=255)
 
 class ItemImage(models.Model):
     image = models.CharField(max_length=9999)
