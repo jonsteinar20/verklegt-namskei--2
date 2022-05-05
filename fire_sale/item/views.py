@@ -10,7 +10,6 @@ items = [
 def index(request):
     #if 'search_filter' in request.GET:
         #search_filter = request.GET('search_filter')
-        #item = [ {
         #items = [ {
          #   'id': x.id,
         #    'name': x.name,
@@ -18,12 +17,11 @@ def index(request):
         #} for x in Item.objects.filter(name__icontains=search_filter) ]
         #return JsonResponse({ 'data': items })
     #context = { 'items': Item.objects.all().order_by('name') }
-    return render(request, 'user/index.html')
+    return render(request, 'item/index.html', context={ 'items':items })
 
 #def get_item_by_id(request, id):
     #return render(request, 'item/item_details.html', {
     #    'item': get_object_or_404(Item, pk=id)
-    #})
     #})
 
 #def create_item(request):
