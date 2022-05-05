@@ -7,6 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+
       </button>
       <a class="navbar-brand" href="#">Fire Sale</a>
     </div>
@@ -15,10 +16,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="{% url 'item-index' %}">Items <span class="sr-only">(current)</span></a></li>
-          <li><a href="{% url 'user-index' %}">Sell</a></li>
+          <li><a href="#">Sell</a></li>
         <li><a href="#">Categories</a></li>
           <li><a href="#">My Listings</a></li>
           <li><a href="#">My Bids</a></li>
+          <li><label for="searchbar"></label><input type="text" id="searchbar" placeholder="Search.."></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

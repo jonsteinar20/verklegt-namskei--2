@@ -5,9 +5,17 @@ from django.http import HttpResponse
 from user.models import User
 from user.forms.profile_form import ProfileForm
 
+<<<<<<< HEAD
 
 #def index(request):
     #return render(request, 'user/index.html')
+=======
+def index(request):
+<<<<<<< HEAD
+    return render(request, 'user/index.html')
+=======
+    return render(request, 'user/index.html')
+>>>>>>> 21e4bbaa02c9a206e40d96873dbeac72b698e39f
 
 def register(request):
     if request.method == 'POST':
@@ -19,6 +27,21 @@ def register(request):
         'form': UserCreationForm()
     })
 
+<<<<<<< HEAD
+#def profile(request):
+#    profile = Profile.objects.filter(user=request.user).first()
+#    if request.method == 'POST':
+#        form = ProfileForm(instance=profile, data=request.POST)
+#        if form.is_valid():
+#            profile = form.save(commit=False)
+#            profile.user = request.user
+#            profile.save()
+#            return redirect('profile')
+#    return render(request, 'user/profile.html', {
+#        'form': ProfileForm(instance=profile)
+#    })
+>>>>>>> main
+=======
 def profile(request):
     profile = User.objects.filter(user=request.user).first()
     if request.method == 'POST':
@@ -31,3 +54,4 @@ def profile(request):
     return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=profile)
     })
+>>>>>>> main
