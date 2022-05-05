@@ -17,13 +17,14 @@ Skipta niður verkefnum út frá ákvörðum frá þriðjudegi.
 Fimmtudagur:
 Hvað þarf að gera:
 - Navigation.html
-	- ls
-	- sd
-	- sd
+	- logo
+	- fire sale home takki
+	- ehv fleira að bæta við ?
 - main.css
-	- sd
-	- sd
-	- sd
+	- navigation bar
+	- search bar
+	- bæta overall look
+	- ehv fleira til að bæta við ?
 - user.views.index
 - item.views.index
 - item.views.get_item_by_id
@@ -31,9 +32,9 @@ Hvað þarf að gera:
 - item.views.delete_item
 - item.views.update_item
 - item.urls
-	- sd
-	- sd
+	- bæta við góðum paths
 - user.urls
+	- bæta við góðum paths
 - user.views
 
 Föstudagur:
