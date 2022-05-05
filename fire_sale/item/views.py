@@ -16,7 +16,11 @@ def index(request):
         #} for x in Item.objects.filter(name__icontains=search_filter) ]
         #return JsonResponse({ 'data': items })
     #context = { 'items': Item.objects.all().order_by('name') }
+<<<<<<< HEAD
     return render(request, 'user/index.html')
+=======
+    return render(request, 'item/index.html', context={ 'items':items })
+>>>>>>> main
 
 #def get_item_by_id(request, id):
     #return render(request, 'item/item_details.html', {
@@ -52,4 +56,8 @@ def index(request):
     #return render(request, 'item/item_update.html', {
         #'form': form,
         #'id': id
+<<<<<<< HEAD
     #})
+=======
+    #})
+>>>>>>> main
