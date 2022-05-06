@@ -1,13 +1,24 @@
 .item {
     border-bottom: solid 2px rgba(155, 155, 155, .5);
 }
+.contain{
+    position: relative;
+    right: 720px;
+    top: -60px;
+}
 
 #searchbar{
     position: absolute;
     top: 300%;
     right: -69px;
     width: 500px;
-    height: 45px;
+    height: 33px;
+}
+#searchbutton{
+    width: 50px;
+    color: purple;
+    right: -50px;
 
 
 }
+
