@@ -54,9 +54,3 @@ def create_item(request):
         #'id': id
 
     #})
-
-    #})
-
-    #})
-
-
