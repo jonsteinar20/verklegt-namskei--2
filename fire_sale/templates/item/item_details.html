@@ -3,4 +3,7 @@
     <h1>{{ item.name }}</h1>
     <p>{{ item.description }}</p>
     <p>{{ item.price }}</p>
+    {% for item_image in item.itemimage_set.all %}
+        <img src="{{ item_image.image }}" class="item-img" />
+    {% endfor %}
 {% endblock %}
