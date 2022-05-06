@@ -1,8 +1,8 @@
-INSERT INTO user_user (username, firstname, lastname, password, email) VALUES('unnurosk123', 'unnur', 'gunnlaugsdottir', 'Sk9999', 'unnurosk@ru.is');
-INSERT INTO user_user (username, firstname, lastname, password, email) VALUES('unnursoley', 'unnur', 'soley', 'La8m134', 'unnur@ru.is');
-INSERT INTO user_user (username, firstname, lastname, password, email) VALUES('jonni44', 'jon', 'steinar', 'P00mbbl', 'jonni@gmail.com');
-INSERT INTO user_user (username, firstname, lastname, password, email) VALUES('andri12', 'andri', 'freysson', 'Andri991', 'andri@hotmail.com');
-INSERT INTO user_user (username, firstname, lastname, password, email) VALUES('jonjons', 'jon', 'jonsson', 'Jj123456', 'jonjonsson@gmail.com');
+INSERT INTO user_profile (name, bio, profile_image) VALUES('unnur gunnlaugsdottir', 'vegan, 20 plants, 10 cats.', 'https://i2-prod.mirror.co.uk/incoming/article14276690.ece/ALTERNATES/s1200b/1_Susan-Boyle.jpg');
+INSERT INTO user_profile (name, bio, profile_image) VALUES('unnur@ru.is', 'i like mimosas on the beach, im a tanist, yay springbreak', 'https://www.spicinfoods.com/pub/media/magefan_blog/shaq-hot-ones-6_1.jpg');
+INSERT INTO user_profile (name, bio, profile_image) VALUES('jon steinar', '300 pounds of pure muscle', 'https://cdn.images.express.co.uk/img/dynamic/1/750x445/1573810.jpg');
+INSERT INTO user_profile (name, bio, profile_image) VALUES('andri freysson', 'curly boy, i like to watch the sun set and dream about a brighter tomorrow', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,h_600/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F160822143039-redhead-convention-1.jpg');
+INSERT INTO user_profile (name, bio, profile_image) VALUES('jon jonsson', 'i like turtles', 'https://cdn.cnn.com/cnnnext/dam/assets/220428123119-weightlifter-forced-to-remove-hair-beads-orig-mg-jk-00001523-large-169.png');
 
 INSERT INTO item_itemcategory (name) VALUES('Electronics');
 INSERT INTO item_itemcategory (name) VALUES('Shoes');
@@ -13,10 +13,10 @@ INSERT INTO item_itemcategory (name) VALUES('Toys and Games');
 INSERT INTO item_itemcategory (name) VALUES('Home supplies');
 INSERT INTO item_itemcategory (name) VALUES('Other');
 
-INSERT INTO item_item (id, name, description, price, category_id, seller_username) VALUES (1, 'iPhone 13 pro 64GB', 'phone in good condition bought 1 year ago', 399.99, 1, 'unnurosk123');
-INSERT INTO item_item (id, name, description, price, category_id, seller_username) VALUES (2, 'Designer glasses', 'Glasses from the 60s very antique', 1300.99, 4, 'jonjons');
-INSERT INTO item_item (id, name, description, price, category_id, seller_username) VALUES (3, 'Red GUCCI sweater', 'Size Large good condition', 299.99, 3, 'andri12');
-INSERT INTO item_item (id, name, description, price, category_id, seller_username) VALUES (4, 'Harry Potter books collection', 'All books', 99.99, 5, 'jonni44');
+INSERT INTO item_item (id, name, description, price, category_id, condition, seller_username) VALUES (1, 'iPhone 13 pro 64GB', 'phone in good condition bought 1 year ago', 399.99, 1, 'excellent', 'unnurosk123');
+INSERT INTO item_item (id, name, description, price, category_id, condition, seller_username) VALUES (2, 'Designer glasses', 'Glasses from the 60s very antique', 1300.99, 4, 'good', 'jonjons');
+INSERT INTO item_item (id, name, description, price, category_id, condition, seller_username) VALUES (3, 'Red GUCCI sweater', 'Size Large good condition', 299.99, 3, 'great', 'andri12');
+INSERT INTO item_item (id, name, description, price, category_id, condition, seller_username) VALUES (4, 'Harry Potter books collection', 'All books', 99.99, 5, 'medium', 'jonni44');
 
 
 INSERT INTO item_itemimage (image, item_id) VALUES('https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone-13-pro-family-hero?wid=940&hei=1112&fmt=png-alpha&.v=1644969385433', 1);
@@ -26,4 +26,5 @@ INSERT INTO item_itemimage (image, item_id) VALUES('https://cdn.childrensalon.co
 INSERT INTO item_itemimage (image, item_id) VALUES('https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/resize=height:335/output=quality:90/compress/x56uKgHORXCMZJDCBEOF', 3);
 INSERT INTO item_itemimage (image, item_id) VALUES('https://images-na.ssl-images-amazon.com/images/I/51FOjToUEkL.jpg', 4);
 INSERT INTO item_itemimage (image, item_id) VALUES('https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1534298934i/862041._SS1200_.jpg', 4);
+
 
