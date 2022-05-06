@@ -8,12 +8,11 @@
 }
 
 #searchbar{
-    position: absolute;
-    top: 300%;
     right: -69px;
     width: 500px;
     height: 33px;
 }
+
 #searchbutton{
     width: 50px;
     color: purple;
