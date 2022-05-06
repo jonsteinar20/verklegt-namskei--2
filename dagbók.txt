@@ -40,6 +40,14 @@ Hvað þarf að gera:
 Föstudagur:
 
 
+Hlutir sem hægt er að fikta í:
+main.css:
+Láta myndir taka upp fixed space
+Láta hluti vera flex í staðinn fyrir span svo 2 hlutir eða meira geti verið hliðina á hvor öðrum
+Gera skemmtilega hönnun fyrir navigation bar
+Hafa það interactive þegar þú hoverar yfir items
+Bæta við einhverri hönnun kannski í item/id(þegar þú hefur smellt á item og ert að inspecta bara það eina item)
+
 VITAL POINTS:
 Hvað viljum við fara langt?
 Á hvað viljum við setja mestu athyglina.
