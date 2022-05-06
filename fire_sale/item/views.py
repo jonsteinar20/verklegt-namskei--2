@@ -4,10 +4,6 @@ from django.http import HttpResponse, JsonResponse
 # Create your views here.
 from item.models import Item
 
-#items = [
-#    {'id': '1', 'name': 'iPhone 13 pro 64GB', 'price': 70000},
-#    {'id': '2', 'name': 'Designer glasses', 'price': 20000}
-#]
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET('search_filter')
@@ -56,5 +52,11 @@ def create_item(request):
     #return render(request, 'item/item_update.html', {
         #'form': form,
         #'id': id
+
     #})
+
+    #})
+
+    #})
+
 

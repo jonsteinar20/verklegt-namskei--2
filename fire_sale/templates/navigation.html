@@ -14,12 +14,13 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <div class="nav navbar-nav">
         <li><a href="{% url 'item-index' %}">Items <span class="sr-only">(current)</span></a></li>
           <li><a href="#">Sell</a></li>
         <li><a href="#">Categories</a></li>
           <li><a href="#">My Listings</a></li>
           <li><a href="#">My Bids</a></li>
+
           <li><label for="searchbar"></label><input type="text" id="searchbar" placeholder="Search.."></li>
           {% if user.is_authenticated %}
               <li><a href= {% url 'profile' %}>Profile</a></li>
@@ -28,6 +29,7 @@
               <li><a href= {% url 'login' %}>Login</a></li>
               <li><a href= {% url 'register' %}>Register</a></li>
           {% endif %}
+
       </ul>
 
         {% if user.is_authenticated %}
@@ -36,4 +38,11 @@
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+ </div>
 </nav>
+      <div class="contain">
+          <form>
+              <label for="searchbar" ></label><input type="text" id="searchbar" placeholder="Search..">
+               <button id="searchbutton">Enter</button>
+          </form>
+      </div>
