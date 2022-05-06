@@ -12,6 +12,7 @@ class Item(models.Model):
     description = models.CharField(max_length=255, blank=True)
     price = models.FloatField()
     category = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
+    condition = models.CharField(max_length=255)
     seller_username = models.CharField(max_length=255)
 
     def __str__(self):
