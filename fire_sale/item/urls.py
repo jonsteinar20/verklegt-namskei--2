@@ -9,8 +9,4 @@ urlpatterns = [
 
     #path('', views.index, name="item-categories"),
 
-
-    path('<int:id>', views.get_item_by_id, name="item_details"),
-    #path('', views.index, name="item-categories"),
-
 ]
