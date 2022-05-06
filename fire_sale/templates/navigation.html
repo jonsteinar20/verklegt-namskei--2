@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
 
       </button>
-      <a class="navbar-brand" href="#">Fire Sale</a>
+      <a class="navbar-brand" href="/">Fire Sale</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -21,11 +21,24 @@
           <li><a href="#">My Listings</a></li>
           <li><a href="#">My Bids</a></li>
 
+          <li><label for="searchbar"></label><input type="text" id="searchbar" placeholder="Search.."></li>
+          {% if user.is_authenticated %}
+              <li><a href= {% url 'profile' %}>Profile</a></li>
+              <li><a href= {% url 'logout' %}>Logout</a></li>
+          {% else %}
+              <li><a href= {% url 'login' %}>Login</a></li>
+              <li><a href= {% url 'register' %}>Register</a></li>
+          {% endif %}
 
       </ul>
+
+        {% if user.is_authenticated %}
+            <img src="{{ user.profile.profile_image }}" class="profile-image" />
+        {% endif %}
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-
+ </div>
 </nav>
       <div class="contain">
           <form>

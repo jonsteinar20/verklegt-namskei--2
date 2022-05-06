@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+<<<<<<< HEAD
+    <data-source source="LOCAL" name="fire-sale-db@34.65.65.99" uuid="4644b63e-c8a0-4f05-9194-3e8b86305c4d">
+=======
     <data-source source="LOCAL" name="fire-sale-db@34.65.65.99" uuid="59df0ce0-9e1a-4368-85ff-277c6e4c5a95">
+>>>>>>> 21e4bbaa02c9a206e40d96873dbeac72b698e39f
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

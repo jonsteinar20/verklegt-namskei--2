@@ -1,11 +1,11 @@
 {% extends 'base.html'%}
 {% block content %}
-    <div class="item">
-        <h2> Welcome to the Item app! </h2>
+    <div class="red">
+        <h2> Items </h2>
     </div>
+    <div class="item">
     {% for item in items %}
-        <h4>{{ item.name }}</h4>
-        <p>{{ item.id }}</p>
-        <p>{{ item.price }}$</p>
+        {% include 'item/single_item.html' with item=item %}
     {% endfor %}
+    </div>
 {% endblock %}
