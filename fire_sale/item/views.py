@@ -1,15 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-<<<<<<< HEAD
 # Create your views here.
 
-=======
 items = [
     {'id': '1', 'name': 'iPhone 13 pro 64GB', 'price': 70000},
     {'id': '2', 'name': 'Designer glasses', 'price': 20000}
 ]
->>>>>>> 21e4bbaa02c9a206e40d96873dbeac72b698e39f
 def index(request):
     #if 'search_filter' in request.GET:
         #search_filter = request.GET('search_filter')
@@ -20,11 +17,8 @@ def index(request):
         #} for x in Item.objects.filter(name__icontains=search_filter) ]
         #return JsonResponse({ 'data': items })
     #context = { 'items': Item.objects.all().order_by('name') }
-<<<<<<< HEAD
-    return render(request, 'user/index.html')
-=======
+
     return render(request, 'item/index.html', context={ 'items':items })
->>>>>>> main
 
 #def get_item_by_id(request, id):
     #return render(request, 'item/item_details.html', {
@@ -60,8 +54,5 @@ def index(request):
     #return render(request, 'item/item_update.html', {
         #'form': form,
         #'id': id
-<<<<<<< HEAD
     #})
-=======
-    #})
->>>>>>> main
+
