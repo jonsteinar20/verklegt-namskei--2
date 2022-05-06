@@ -9,6 +9,21 @@ from item.models import Item
 #    {'id': '2', 'name': 'Designer glasses', 'price': 20000}
 #]
 def index(request):
+    #if 'search_filter' in request.GET:
+        #search_filter = request.GET('search_filter')
+        #items = [ {
+         #   'id': x.id,
+        #    'name': x.name,
+        #    'description': x.description
+        #} for x in Item.objects.filter(name__icontains=search_filter) ]
+        #return JsonResponse({ 'data': items })
+    #context = { 'items': Item.objects.all().order_by('name') }
+
+    return render(request, 'user/index.html')
+
+    return render(request, 'item/index.html', context={ 'items':items })
+
+
     if 'search_filter' in request.GET:
         search_filter = request.GET('search_filter')
         items = [ {
@@ -19,6 +34,7 @@ def index(request):
         return JsonResponse({ 'data': items })
     context = { 'items': Item.objects.all().order_by('name') }
     return render(request, 'item/index.html', context)
+
 
 def get_item_by_id(request, id):
     return render(request, 'item/item_details.html', {
@@ -54,5 +70,11 @@ def get_item_by_id(request, id):
     #return render(request, 'item/item_update.html', {
         #'form': form,
         #'id': id
+
     #})
+
+    #})
+
+    #})
+
 
