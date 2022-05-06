@@ -13,9 +13,8 @@ class ItemCreateForm(ModelForm):
             'description': widgets.textInput(attrs={'class': 'form-control'}),
             'category': widgets.textInput(attrs={'class': 'form-control'}),
             'price': widgets.numberInput(attrs={'class': 'form-control'}),
-            'condition': widgets.textInput(attrs={'class': 'form-control'}),
+            #'condition': widgets.textInput(attrs={'class': 'form-control'}),
             'seller_username': widgets.textInput(attrs={'class': 'form-control'})
-
         }
 
 
