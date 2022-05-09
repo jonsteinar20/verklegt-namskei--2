@@ -30,6 +30,7 @@ def create_item(request):
             #item = form.save()
             #return redirect('item-index')
     else:
+        from item.forms.item_form import ItemCreateForm
         form = ItemCreateForm()
     return render(request, 'item/create_item.html', {
         'form': form
