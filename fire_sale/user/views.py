@@ -6,10 +6,9 @@ from user.models import User
 from user.forms.profile_form import ProfileForm
 
 
-#def index(request):
-    #return render(request, 'user/index.html')
 def index(request):
     return render(request, 'user/index.html')
+
 
 def register(request):
     if request.method == 'POST':
@@ -21,8 +20,9 @@ def register(request):
         'form': UserCreationForm()
     })
 
+
 def profile(request):
-    profile = User.objects.filter(user=request.user).first()
+    profile = User.objects.filter(user=request.name).first()
     if request.method == 'POST':
         form = ProfileForm(instance=profile, data=request.POST)
         if form.is_valid():

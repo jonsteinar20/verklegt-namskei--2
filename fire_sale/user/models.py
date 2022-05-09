@@ -1,5 +1,4 @@
 from django.contrib.auth.models import User
-from user.views import User
 from django.db import models
 
 # Create your models here.
@@ -14,8 +13,6 @@ class Profile(models.Model):
     #password = models.CharField(max_length=255)
     #email = models.CharField(max_length=255)
 
-    def __str__(self):
-        self.name
 
 #class UserImage(models.Model):
 #    image = models.CharField(max_length=9999)

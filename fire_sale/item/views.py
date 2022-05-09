@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
 from item.models import Item, ItemImage
@@ -24,6 +25,8 @@ def get_item_by_id(request, id):
         'item': get_object_or_404(Item, pk=id)
     })
 
+
+@login_required
 def create_item(request):
     if request.method == 'POST':
         print(1)
