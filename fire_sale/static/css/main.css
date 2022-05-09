@@ -1,11 +1,24 @@
 .item {
     border-bottom: solid 2px rgba(155, 155, 155, .5);
 }
+
+.items {
+    display: grid ;
+    grid-template-columns: 350px 350px 350px;
+}
+
+.candy-img {
+    width: 300px;
+}
+
+
 .contain{
     position: relative;
     right: 720px;
     top: -60px;
 }
+
+
 
 #searchbar{
     right: -69px;
@@ -20,18 +33,13 @@
 }
 
 .container{
-    background-color: lightgray;
+    background-color: pink;
     font-family: "Apple Braille";
     font-size: xx-large;
 }
 
 .collapse navbar-collapse{
     color: lightgray;
-}
-.navbar-brand{
-    margin: fill;
-    float: right;
-    color: green;
 }
 
 
