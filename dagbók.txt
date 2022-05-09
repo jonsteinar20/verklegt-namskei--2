@@ -54,8 +54,8 @@ Hvað viljum við fara langt?
 
 
 Task listi:
-Láta myndir taka upp fixed space
-Láta hluti vera flex í staðinn fyrir span svo 2 hlutir eða meira geti verið hliðina á hvor öðrum
+Láta myndir taka upp fixed space - unnurs
+Láta hluti vera flex í staðinn fyrir span svo 2 hlutir eða meira geti verið hliðina á hvor öðrum - unnurs
 Hafa það interactive þegar þú hoverar yfir items
 Bæta við einhverri hönnun kannski í item/id(þegar þú hefur smellt á item og ert að inspecta bara það eina item)
 Filter by functionality
