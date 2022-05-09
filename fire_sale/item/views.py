@@ -1,19 +1,20 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
-
+from item.models import Item, ItemImage
+#from item.forms.item_form import ItemCreateForm
 # Create your views here.
-from item.models import Item
+
 
 def index(request):
     if 'search_filter' in request.GET:
         search_filter = request.GET('search_filter')
-        items = [ {
+        items = [{
             'id': x.id,
             'name': x.name,
             'description': x.description
-        } for x in Item.objects.filter(name__contains=search_filter) ]
-        return JsonResponse({ 'data': items })
-    context = { 'items': Item.objects.all().order_by('name') }
+        } for x in Item.objects.filter(name__contains=search_filter)]
+        return JsonResponse({'data': items })
+    context = {'items': Item.objects.all().order_by('name')}
     return render(request, 'item/index.html', context)
 
 
@@ -28,9 +29,10 @@ def create_item(request):
         form = ItemCreateForm(data=request.POST)
         if form.is_valid():
             item = form.save()
+            item_image = ItemImage(image=request.POST['image'], item=item)
+            item_image.save()
             return redirect('item-index')
     else:
-        from item.forms.item_form import ItemCreateForm
         form = ItemCreateForm()
     return render(request, 'item/create_item.html', {
         'form': form
