@@ -15,7 +15,22 @@
 
 #searchbutton{
     width: 50px;
-    color: purple;
+    color: lightgray;
     right: -50px;
+}
+
+.container{
+    background-color: lightgray;
+    font-family: "Apple Braille";
+    font-size: xx-large;
+}
+
+.collapse navbar-collapse{
+    color: lightgray;
+}
+.navbar-brand{
+    margin: fill;
+    float: right;
+    color: green;
 }
 
