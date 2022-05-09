@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
 
 # Create your views here.
@@ -25,10 +25,10 @@ def get_item_by_id(request, id):
 def create_item(request):
     if request.method == 'POST':
         print(1)
-        #form = ItemCreateForm(data=request.POST)
-        #if form.is_valid():
-            #item = form.save()
-            #return redirect('item-index')
+        form = ItemCreateForm(data=request.POST)
+        if form.is_valid():
+            item = form.save()
+            return redirect('item-index')
     else:
         from item.forms.item_form import ItemCreateForm
         form = ItemCreateForm()
