@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
 from item.models import Item, ItemImage
-#from item.forms.item_form import ItemCreateForm
+from item.forms.item_form import ItemCreateForm
 # Create your views here.
 
 

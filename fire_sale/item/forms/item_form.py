@@ -5,15 +5,15 @@ from django.forms import widgets
 
 
 class ItemCreateForm(ModelForm):
-    image = forms.CharField(required=True, widgets=forms.TextInput(attrs={'class': 'form-control'}))
+    image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
     class Meta:
         model = Item
         exclude = ['id', 'seller_username']
         widgets = {
-            'name': widgets.textInput(attrs={'class': 'form-control'}),
-            'description': widgets.textInput(attrs={'class': 'form-control'}),
-            'price': widgets.numberInput(attrs={'class': 'form-control'}),
-            'condition': widgets.textInput(attrs={'class': 'form-control'})
+            'name': widgets.TextInput(attrs={'class': 'form-control'}),
+            'description': widgets.TextInput(attrs={'class': 'form-control'}),
+            'price': widgets.NumberInput(attrs={'class': 'form-control'}),
+            'condition': widgets.TextInput(attrs={'class': 'form-control'})
         }
 
 
