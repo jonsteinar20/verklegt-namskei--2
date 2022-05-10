@@ -24,3 +24,14 @@ class ItemImage(models.Model):
 
     def __str__(self):
         return self.name
+
+class offers(models.Model):
+    nameOnCard = models.CharField(max_length=255)
+    offer = models.FloatField()
+    cardNum = models.FloatField()
+    dateAndYear = models.FloatField()
+    securityNum = models.FloatField()
+    comment = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.nameOnCard
