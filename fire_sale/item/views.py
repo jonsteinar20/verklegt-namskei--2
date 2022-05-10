@@ -1,16 +1,19 @@
-from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
-
+from item.models import Item, ItemImage
+from item.forms.item_form import ItemCreateForm
 # Create your views here.
-from item.models import Item
+
 
 def index(request):
     if 'search_filter' in request.GET:
-        search_filter = request.GET('search_filter')
+        search_filter = request.GET['search_filter']
         items = [ {
             'id': x.id,
             'name': x.name,
-            'description': x.description
+            'description': x.description,
+            'firstImage': x.itemimage_set.first().image
         } for x in Item.objects.filter(name__contains=search_filter) ]
         return JsonResponse({ 'data': items })
     context = { 'items': Item.objects.all().order_by('name') }
@@ -22,13 +25,17 @@ def get_item_by_id(request, id):
         'item': get_object_or_404(Item, pk=id)
     })
 
+
+@login_required
 def create_item(request):
     if request.method == 'POST':
         print(1)
-        #form = ItemCreateForm(data=request.POST)
-        #if form.is_valid():
-            #item = form.save()
-            #return redirect('item-index')
+        form = ItemCreateForm(data=request.POST)
+        if form.is_valid():
+            item = form.save()
+            item_image = ItemImage(image=request.POST['image'], item=item)
+            item_image.save()
+            return redirect('item-index')
     else:
         form = ItemCreateForm()
     return render(request, 'item/create_item.html', {

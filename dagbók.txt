@@ -51,3 +51,23 @@ Bæta við einhverri hönnun kannski í item/id(þegar þú hefur smellt á item
 VITAL POINTS:
 Hvað viljum við fara langt?
 Á hvað viljum við setja mestu athyglina.
+
+
+Task listi:
+Láta myndir taka upp fixed space - unnurs - komið, þori ekki að pusha
+Láta hluti vera flex í staðinn fyrir span svo 2 hlutir eða meira geti verið hliðina á hvor öðrum - unnurs - komið
+Hafa það interactive þegar þú hoverar yfir items - unnurs - komið
+Bæta við einhverri hönnun kannski í item/id(þegar þú hefur smellt á item og ert að inspecta bara það eina item)- unnurs
+Filter by functionality
+Profile functionality
+Average rating þegar manneskja hefur loggað sig inn
+Laga svo það er hægt að ýta á item fyrir description eftir search
+
+
+
+
+
+
+
+
+
