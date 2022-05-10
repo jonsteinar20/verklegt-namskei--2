@@ -22,7 +22,7 @@ def register(request):
 
 
 def profile(request):
-    profile = User.objects.filter(user=request.name).first()
+    profile = User.objects.get(username=request.user.username)
     if request.method == 'POST':
         form = ProfileForm(instance=profile, data=request.POST)
         if form.is_valid():

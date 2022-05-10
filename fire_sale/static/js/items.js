@@ -1,3 +1,5 @@
+//import * as name from "../../item"
+
 $(document).ready(function() {
     $('#search-btn').on('click', function (e) {
         e.preventDefault();
@@ -24,5 +26,17 @@ $(document).ready(function() {
         })
     });
 });
+
+$('#orderby').change(function(e) {
+    let filter_by = $('#orderby').val()
+    if(filter_by == 'Name') {
+        filter_by_name()
+        console.log("name")
+    }
+    else {
+        console.log("price")
+        //item.views.filter_by_price()
+    }
+})
 
 
