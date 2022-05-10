@@ -1,25 +1,3 @@
-
-/*
-STYLESHEET TABLE OF CONTENT
-1. Body
-2. Navigation bar
-*/
-
-/*1. Body */
-body{
-    background-color: beige;
-}
-
-/*2. Navigation bar*/
-div_nav{
-    background-color: aqua;
-}
-
-
-
-.item {
-    border-bottom: solid 2px rgba(155, 155, 155, .5);
-}
 /* ###########################################################################################
     STYLESHEET TABLE OF CONTENTS
         1. BODY
