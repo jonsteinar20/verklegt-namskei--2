@@ -61,3 +61,6 @@ def create_item(request):
         #'id': id
 
     #})
+
+def make_bid(request):
+    return

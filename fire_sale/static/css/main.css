@@ -31,7 +31,7 @@
     opacity: 0.9;
     background: lavender;
 }
-.well.item a{
+.well.item a {
     width:4600px;
 }
 img{
@@ -63,9 +63,7 @@ body{
 .container h1{
     display: flex;
 }
-img.item-img{
-    display: block;
-}
+
 .input-group-btn:hover{
     opacity: 0.9;
     background: purple;
@@ -73,4 +71,40 @@ img.item-img{
 
 .well.item a p{
     text-align: center;
+}
+
+.container p{
+    text-align: left;
+}
+
+img.item-img{
+    float: left;
+}
+
+.container buy-btn{
+  display: inline-block; /* Make the buttons appear below each other */
+    font-family: "Apple Braille";
+}
+
+.buy-btn{
+    float: right;
+    border: 1px solid black;
+    padding: 10px 24px;
+    width: 10%;
+    height: 200px;
+    display: block;
+    font-family: "Apple Braille";
+}
+.buy-btn text{
+    font-family: "Apple Braille";
+    font-size: xx-large;
+    text-align: center;
+}
+.bid-btn{
+    float: right;
+    border: 1px solid black;
+    padding: 10px 24px;
+    width: 10%;
+    height: 200px;
+    display: block;
 }
