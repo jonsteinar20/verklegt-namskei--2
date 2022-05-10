@@ -71,5 +71,17 @@ def create_item(request):
 
     #})
 
-def make_bid(request):
-    return
+#def make_bid(request):
+#    if request.method == 'POST':
+#        print(1)
+#        form = ItemCreateForm(data=request.POST)
+#        if form.is_valid():
+#            item = form.save()
+#            item_image = ItemImage(image=request.POST['image'], item=item)
+#            item_image.save()
+#            return redirect('item-index')
+#    else:
+#        form = ItemCreateForm()
+#    return render(request, 'item/create_item.html', {
+#        'form': form
+#    })
