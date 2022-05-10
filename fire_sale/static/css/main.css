@@ -1,45 +1,76 @@
 .item {
     border-bottom: solid 2px rgba(155, 155, 155, .5);
+    text-align: center;
+    border: 1px solid black;
+    height: 360px;
+    width: 563px;
 }
-
-.items {
-    display: grid ;
-    grid-template-columns: 350px 350px 350px;
-}
-
-.candy-img {
-    width: 300px;
-}
-
-
-.contain{
-    position: relative;
-    right: 720px;
-    top: -60px;
-}
-
-
-
-#searchbar{
-    right: -69px;
-    width: 500px;
-    height: 33px;
-}
-
-#searchbutton{
-    width: 50px;
-    color: lightgray;
-    right: -50px;
-}
-
 .container{
-    background-color: pink;
+    background-color: lavender;
     font-family: "Apple Braille";
     font-size: xx-large;
+    text-align: center;
 }
 
 .collapse navbar-collapse{
     color: lightgray;
 }
+.navbar-brand{
+    margin: fill;
+    float: right;
+    color: green;
+    text-align: center;
+}
 
+.well.item{
+    display: inline-flex;
+    position: center ;
+    margin: auto;
+}
+.well.item a:hover {
+    opacity: 0.9;
+    background: lavender;
+}
+.well.item a{
+    width:4600px;
+}
+img{
+    width:210px;
+   height:210px;
+}
 
+body{
+    background-color: lavender;
+}
+
+/*img:hover{  //hoveraryfirmyndirbara
+    opacity: 0.3;
+    background: white;
+}*/
+
+.navbar-header:hover{
+    opacity: 0.9;
+    background: lavender;
+}
+.nav.navbar-nav li:hover{
+    opacity: 0.9;
+    background: lavender;
+}
+.container p text{
+    display: flex;
+    text-align: center;
+}
+.container h1{
+    display: flex;
+}
+img.item-img{
+    display: block;
+}
+.input-group-btn:hover{
+    opacity: 0.9;
+    background: purple;
+}
+
+.well.item a p{
+    text-align: center;
+}
