@@ -27,9 +27,6 @@
               <li><a href= {% url 'login' %}>Login</a></li>
               <li><a href= {% url 'register' %}>Register</a></li>
           {% endif %}
-          <li><label for="searchbar"></label><input type="text" id="searchbar" placeholder="Search.."></li>
-      </ul>
-
         {% if user.is_authenticated %}
             <img src="{{ user.profile.profile_image }}" class="profile-image" />
         {% endif %}
@@ -38,3 +35,21 @@
   </div><!-- /.container-fluid -->
  </div>
 </nav>
+
+
+<!-- New nav -->
+<head>
+    <div class="nav_container">
+
+        <img src="" alt="logo" class="logo">
+        <nav>
+            <li><a href="">Items</a></li>
+            <li><a href="">Sell</a></li>
+            <li><a href="">Categories</a></li>
+            <li><a href="">Listings</a></li>
+            <li><a href="">My Bids</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Register</a></li>
+        </nav>
+    </div>
+</head>
