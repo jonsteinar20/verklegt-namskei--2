@@ -20,37 +20,111 @@ div_nav{
 .item {
     border-bottom: solid 2px rgba(155, 155, 155, .5);
 }
-.contain{
-    position: relative;
-    right: 720px;
-    top: -60px;
+/* ###########################################################################################
+    STYLESHEET TABLE OF CONTENTS
+        1. BODY
+        2. NAVIGATION BAR
+        3. ITEMS
+        4. CONTAINER
+ ########################################################################################### */
+
+
+/* 1. BODY ################################################################################# */
+body{
+    background-color: green;
+}
+/* ######################################################################################### */
+
+
+
+/* 2. NAVIGATION BAR ####################################################################### */
+.navbar-default{
+    background-color: black;
 }
 
-#searchbar{
-    right: -69px;
-    width: 500px;
-    height: 33px;
-}
-
-#searchbutton{
-    width: 50px;
-    color: lightgray;
-    right: -50px;
-}
-
-.container{
-    background-color: lightgray;
-    font-family: "Apple Braille";
-    font-size: xx-large;
-}
-
-.collapse navbar-collapse{
-    color: lightgray;
-}
 .navbar-brand{
     margin: fill;
     float: right;
-    color: green;
+    color: black;
+    text-align: center;
 }
 
+.navbar-header:hover{
+    opacity: 0.9;
+    background: lavender;
+}
+
+.nav.navbar-nav li:hover{
+    opacity: 0.9;
+    background: lavender;
+}
+/* ######################################################################################### */
+
+
+
+/* 3. Items #################################################################################*/
+.item {
+    border-bottom: solid 2px rgba(155, 155, 155, .5);
+    text-align: center;
+    border: 1px solid black;
+    height: 360px;
+    width: 563px;
+}
+.well.item{
+    display: inline-flex;
+    position: center ;
+    margin: auto;
+}
+l.item a:hover {
+    opacity: 0.9;
+    background: lavender;
+}
+.well.item a {
+    width:4600px;
+}
+.well.item a p{
+    text-align: center;
+}
+/* ######################################################################################### */
+
+
+
+/* 4. CONTAINER ############################################################################ */
+.container{
+    font-family: "Apple Braille";
+    font-size: xx-large;
+    text-align: center;
+}
+.container p text{
+    display: flex;
+    text-align: center;
+}
+.container h1{
+    display: flex;
+}
+
+img{
+    width:210px;
+   height:210px;
+}
+img.item-img{
+    display: block;
+}
+.input-group-btn:hover{
+    opacity: 0.9;
+    background: purple;
+}
+
+
+.well.item a p{
+    text-align: center;
+}
+
+.container p{
+    text-align: left;
+}
+
+.container item-img{
+
+}
 
