@@ -31,7 +31,7 @@
     opacity: 0.9;
     background: lavender;
 }
-.well.item a{
+.well.item a {
     width:4600px;
 }
 img{
@@ -63,9 +63,7 @@ body{
 .container h1{
     display: flex;
 }
-img.item-img{
-    display: block;
-}
+
 .input-group-btn:hover{
     opacity: 0.9;
     background: purple;
@@ -73,4 +71,12 @@ img.item-img{
 
 .well.item a p{
     text-align: center;
+}
+
+.container p{
+    text-align: left;
+}
+
+.container item-img{
+
 }

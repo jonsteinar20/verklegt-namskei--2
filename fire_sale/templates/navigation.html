@@ -27,7 +27,6 @@
               <li><a href="{% url 'login' %}">Login</a></li>
               <li><a href="{% url 'register' %}">Register</a></li>
           {% endif %}
-          <li><label for="searchbar"></label><input type="text" id="searchbar" placeholder="Search.."></li>
       </ul>
 
         {% if user.is_authenticated %}
