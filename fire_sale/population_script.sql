@@ -13,6 +13,7 @@ INSERT INTO item_itemcategory (name) VALUES('Toys and Games');
 INSERT INTO item_itemcategory (name) VALUES('Home supplies');
 INSERT INTO item_itemcategory (name) VALUES('Other');
 
+
 INSERT INTO item_item (id, name, description, price, category_id, condition, seller_username) VALUES (1, 'iPhone 13 pro 64GB', 'phone in good condition bought 1 year ago', 399.99, 1, 'excellent', 'unnurosk123');
 INSERT INTO item_item (id, name, description, price, category_id, condition, seller_username) VALUES (2, 'Designer glasses', 'Glasses from the 60s very antique', 1300.99, 4, 'good', 'jonjons');
 INSERT INTO item_item (id, name, description, price, category_id, condition, seller_username) VALUES (3, 'Red GUCCI sweater', 'Size Large good condition', 299.99, 3, 'great', 'andri12');
