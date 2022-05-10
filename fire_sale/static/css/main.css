@@ -1,3 +1,46 @@
+/* ###########################################################################################
+    STYLESHEET TABLE OF CONTENTS
+        1. BODY
+        2. NAVIGATION BAR
+        3. ITEMS
+        4. CONTAINER
+ ########################################################################################### */
+
+
+/* 1. BODY ################################################################################# */
+body{
+    background-color: green;
+}
+/* ######################################################################################### */
+
+
+
+/* 2. NAVIGATION BAR ####################################################################### */
+.navbar-default{
+    background-color: black;
+}
+
+.navbar-brand{
+    margin: fill;
+    float: right;
+    color: black;
+    text-align: center;
+}
+
+.navbar-header:hover{
+    opacity: 0.9;
+    background: lavender;
+}
+
+.nav.navbar-nav li:hover{
+    opacity: 0.9;
+    background: lavender;
+}
+/* ######################################################################################### */
+
+
+
+/* 3. Items #################################################################################*/
 .item {
     border-bottom: solid 2px rgba(155, 155, 155, .5);
     text-align: center;
@@ -5,63 +48,41 @@
     height: 360px;
     width: 563px;
 }
+.well.item{
+    display: inline-flex;
+    position: center ;
+    margin: auto;
+}
+l.item a:hover {
+    opacity: 0.9;
+    background: lavender;
+}
+.well.item a{
+    width:4600px;
+}
+.well.item a p{
+    text-align: center;
+}
+/* ######################################################################################### */
+
+
+
+/* 4. CONTAINEER ############################################################################ */
 .container{
-    background-color: lavender;
     font-family: "Apple Braille";
     font-size: xx-large;
     text-align: center;
 }
-
-.collapse navbar-collapse{
-    color: lightgray;
-}
-.navbar-brand{
-    margin: fill;
-    float: right;
-    color: green;
-    text-align: center;
-}
-
-.well.item{
-    display: inline-flex;
-    position: center ;
-    margin: auto;
-}
-.well.item a:hover {
-    opacity: 0.9;
-    background: lavender;
-}
-.well.item a{
-    width:4600px;
-}
-img{
-    width:210px;
-   height:210px;
-}
-
-body{
-    background-color: lavender;
-}
-
-/*img:hover{  //hoveraryfirmyndirbara
-    opacity: 0.3;
-    background: white;
-}*/
-
-.navbar-header:hover{
-    opacity: 0.9;
-    background: lavender;
-}
-.nav.navbar-nav li:hover{
-    opacity: 0.9;
-    background: lavender;
-}
 .container p text{
     display: flex;
     text-align: center;
 }
 .container h1{
     display: flex;
+}
+img{
+    width:210px;
+   height:210px;
 }
 img.item-img{
     display: block;
@@ -70,60 +91,4 @@ img.item-img{
     opacity: 0.9;
     background: purple;
 }
-
-.well.item a p{
-    text-align: center;
-}
-
-.well.item{
-    display: inline-flex;
-    position: center ;
-    margin: auto;
-}
-.well.item a:hover {
-    opacity: 0.9;
-    background: lavender;
-}
-.well.item a{
-    width:4600px;
-}
-img{
-    width:210px;
-   height:210px;
-}
-
-body{
-    background-color: lavender;
-}
-
-/*img:hover{  //hoveraryfirmyndirbara
-    opacity: 0.3;
-    background: white;
-}*/
-
-.navbar-header:hover{
-    opacity: 0.9;
-    background: lavender;
-}
-.nav.navbar-nav li:hover{
-    opacity: 0.9;
-    background: lavender;
-}
-.container p text{
-    display: flex;
-    text-align: center;
-}
-.container h1{
-    display: flex;
-}
-img.item-img{
-    display: block;
-}
-.input-group-btn:hover{
-    opacity: 0.9;
-    background: purple;
-}
-
-.well.item a p{
-    text-align: center;
-}
+/* ######################################################################################## */
