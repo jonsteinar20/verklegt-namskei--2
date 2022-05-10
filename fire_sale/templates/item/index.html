@@ -2,6 +2,13 @@
 {% block content %}
     <h3 class="red">Items</h3>
     <div class="input-group">
+        <div id="dropdown-menu">
+            <label for="orderby">Order By:</label>
+            <select name="orderby" id="orderby">
+                <option id="name-option">Name</option>
+                <option id="price-option">Price</option>
+            </select>
+        </div>
         <input type="search" class="form-control" id="search-box" placeholder="Enter your search here.." />
         <div class="input-group-btn">
             <button type="button" id="search-btn" class="btn btn-default">Search</button>

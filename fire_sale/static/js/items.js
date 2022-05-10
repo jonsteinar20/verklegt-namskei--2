@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    $('#search-btn').on( 'click', function(e) {
+    $('#search-btn').on('click', function (e) {
         e.preventDefault();
         let searchText = $('#search-box').val();
-        $.ajax( {
+        $.ajax({
             url: '/items?search_filter=' + searchText,
             type: 'GET',
-            success: function(resp) {
+            success: function (resp) {
                 let newHtml = resp.data.map(d => {
                     return `<div class="well item">
                                 <a href="/items/$(d.id)">
@@ -18,7 +18,7 @@ $(document).ready(function() {
                 $('.items').html(newHtml.join(''));
                 $('#search-box').val('');
             },
-            error: function(xhr, status, error) {
+            error: function (xhr, status, error) {
                 console.error(error)
             }
         })
