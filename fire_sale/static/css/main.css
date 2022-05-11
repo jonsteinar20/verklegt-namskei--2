@@ -135,3 +135,7 @@ img.item-img{
 
 }
 
+img.profile-image{
+    height: 60px;
+    width: 60px;
+}
