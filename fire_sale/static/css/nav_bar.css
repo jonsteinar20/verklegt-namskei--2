@@ -1,0 +1,36 @@
+/*
+NavBar stylesheet - Table of contents:
+1.
+*/
+
+div.container-fluid{
+    background-image: linear-gradient(to bottom right, rgb(250, 112, 0), rgba(255, 229, 0, 0.56));
+}
+
+.navbar-header{
+}
+
+nav navbar-nav{
+    font-family: "Al Tarikh";
+}
+
+.navbar-default{
+    background-color: black;
+}
+
+.navbar-brand{
+    margin: fill;
+    float: right;
+    color: black;
+    text-align: center;
+}
+
+.navbar-header:hover{
+    opacity: 0.9;
+    background: rgba(255, 255, 255, 0.51);
+}
+
+.nav.navbar-nav li:hover{
+    opacity: 0.9;
+    background: rgba(255, 255, 255, 0.51);
+}
