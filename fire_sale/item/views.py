@@ -53,13 +53,14 @@ def create_item(request):
     })
 
 def make_bid(request):
+
     if request.method == 'POST':
         form = MakeBidForm(data=request.POST)
         if form.is_valid():
-            bid = form.save()
-            return redirect('item_details')
+            item = form.save()
+            return redirect('item-make_bid')
     else:
-        form = MakeBidForm
+        form = MakeBidForm()
     return render(request, 'item/make_bid.html', {
         'form': form
     })
