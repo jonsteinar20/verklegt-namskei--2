@@ -38,8 +38,8 @@ def get_item_by_id(request, id):
 
 @login_required
 def create_item(request):
+
     if request.method == 'POST':
-        print(1)
         form = ItemCreateForm(data=request.POST)
         if form.is_valid():
             item = form.save()
@@ -83,3 +83,10 @@ def make_bid(request):
         #'id': id
 
     #})
+
+
+@login_required
+def my_listings(request):
+    context = { 'items': Item.objects.all() }
+    return render(request, 'item/my_listings.html', context)
+
