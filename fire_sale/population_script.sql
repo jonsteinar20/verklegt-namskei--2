@@ -1,9 +1,3 @@
-INSERT INTO user_profile (name, bio, profile_image) VALUES('unnur gunnlaugsdottir', 'vegan, 20 plants, 10 cats.', 'https://i2-prod.mirror.co.uk/incoming/article14276690.ece/ALTERNATES/s1200b/1_Susan-Boyle.jpg');
-INSERT INTO user_profile (name, bio, profile_image) VALUES('unnur@ru.is', 'i like mimosas on the beach, im a tanist, yay springbreak', 'https://www.spicinfoods.com/pub/media/magefan_blog/shaq-hot-ones-6_1.jpg');
-INSERT INTO user_profile (name, bio, profile_image) VALUES('jon steinar', '300 pounds of pure muscle', 'https://cdn.images.express.co.uk/img/dynamic/1/750x445/1573810.jpg');
-INSERT INTO user_profile (name, bio, profile_image) VALUES('andri freysson', 'curly boy, i like to watch the sun set and dream about a brighter tomorrow', 'https://dynaimage.cdn.cnn.com/cnn/q_auto,h_600/https%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F160822143039-redhead-convention-1.jpg');
-INSERT INTO user_profile (name, bio, profile_image) VALUES('jon jonsson', 'i like turtles', 'https://cdn.cnn.com/cnnnext/dam/assets/220428123119-weightlifter-forced-to-remove-hair-beads-orig-mg-jk-00001523-large-169.png');
-
 INSERT INTO item_itemcategory (name) VALUES('Electronics');
 INSERT INTO item_itemcategory (name) VALUES('Shoes');
 INSERT INTO item_itemcategory (name) VALUES('Clothes');
