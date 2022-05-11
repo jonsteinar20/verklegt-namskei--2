@@ -83,3 +83,10 @@ def make_bid(request):
         #'id': id
 
     #})
+
+
+@login_required
+def my_listings(request):
+    context = { 'items': Item.objects.all() }
+    return render(request, 'item/my_listings.html', context)
+
