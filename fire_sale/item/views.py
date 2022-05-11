@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
 from item.models import Item, ItemImage
 from item.forms.item_form import ItemCreateForm
+from item.forms.make_bid_form import MakeBidForm
 # Create your views here.
 
 
@@ -51,6 +52,18 @@ def create_item(request):
         'form': form
     })
 
+def make_bid(request):
+    if request.method == 'POST':
+        form = MakeBidForm(data=request.POST)
+        if form.is_valid():
+            bid = form.save()
+            return redirect('item_details')
+    else:
+        form = MakeBidForm
+    return render(request, 'item/make_bid.html', {
+        'form': form
+    })
+
 #def delete_item(request, id):
     #item = get_object_or_404(Item, pk=id)
     #item.delete()
@@ -70,6 +83,3 @@ def create_item(request):
         #'id': id
 
     #})
-
-def make_bid(request):
-    return

@@ -1,1 +1,8 @@
-<p>Hello from inside make bid</p>
+{% extends "base.html" %}
+{% block content %}
+    <form class="form form-horizontal" action="{% url 'make_bid' %}" method="post"></form>
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Make Bid" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0"/>
+    </form>
+{% endblock %}

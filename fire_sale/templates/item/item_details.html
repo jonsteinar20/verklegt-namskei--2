@@ -5,10 +5,9 @@
     <p>{{ item.price }}</p>
     {% for item_image in item.itemimage_set.all %}
         <img src="{{ item_image.image }}" class="item-img" />
-        <div class="container">
-            <button href="{‰ url 'item-make-bid' %}" class="bid-btn"  type="button">Make A Bid</button>
-        <button href="#" class="buy-btn">Buy Now</button>
-        </div>
     {% endfor %}
-
+    <div class="container">
+        <button class="bid-btn" type="button"><a href="{% url 'make_bid' %}">Make A Bid</a></button>
+        <button href="#" class="buy-btn">Buy Now</button>
+    </div>
 {% endblock %}
