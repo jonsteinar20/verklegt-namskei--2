@@ -9,5 +9,5 @@ class Profile(models.Model):
     profile_image = models.CharField(max_length=9999)
 
 
-#    def __str__(self):
-#        return self.name
+    def __str__(self):
+        return self.name

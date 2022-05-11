@@ -1,4 +1,5 @@
 from django.db import models
+from user.models import Profile
 
 # Create your models here.
 class ItemCategory(models.Model):
@@ -13,7 +14,7 @@ class Item(models.Model):
     price = models.FloatField()
     category = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
     condition = models.CharField(max_length=255, blank=True)
-    seller_username = models.CharField(max_length=255)
+    seller = models.ForeignKey(Profile, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
