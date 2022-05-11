@@ -38,8 +38,8 @@ def get_item_by_id(request, id):
 
 @login_required
 def create_item(request):
+
     if request.method == 'POST':
-        print(1)
         form = ItemCreateForm(data=request.POST)
         if form.is_valid():
             item = form.save()

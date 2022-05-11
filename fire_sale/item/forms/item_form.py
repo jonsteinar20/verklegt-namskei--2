@@ -15,5 +15,3 @@ class ItemCreateForm(ModelForm):
             'price': widgets.NumberInput(attrs={'class': 'form-control'}),
             'condition': widgets.TextInput(attrs={'class': 'form-control'})
         }
-
-
