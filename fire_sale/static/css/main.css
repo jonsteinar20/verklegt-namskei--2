@@ -109,20 +109,16 @@ img.item-img{
     font-family: "Apple Braille";
 }
 
-.buy-btn{
+/*.buy-btn{
     float: right;
     border: 1px solid black;
     padding: 10px 24px;
     width: 10%;
-    height: 200px;
-    display: block;
+    height: 150px;
+    display: inline-block;
     font-family: "Apple Braille";
 }
-.buy-btn text{
-    font-family: "Apple Braille";
-    font-size: xx-large;
-    text-align: center;
-}
+
 .bid-btn{
     float: right;
     border: 1px solid black;
@@ -130,7 +126,7 @@ img.item-img{
     width: 10%;
     height: 200px;
     display: block;
-}
+}*/
 
 .container item-img{
 
