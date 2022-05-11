@@ -24,3 +24,13 @@ class ItemImage(models.Model):
 
     def __str__(self):
         return self.name
+
+class Offer(models.Model):
+    amount = models.FloatField()
+    card_number = models.IntegerField()
+    exp_date_month = models.IntegerField()
+    exp_date_year = models.IntegerField()
+    cvc = models.IntegerField()
+    first_name = models.CharField(max_length=9999)
+    last_name = models.CharField(max_length=9999)
+    email = models.CharField(max_length=9999)
