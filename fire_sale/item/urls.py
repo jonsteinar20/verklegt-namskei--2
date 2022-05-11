@@ -8,4 +8,5 @@ urlpatterns = [
     #path(r'^$', views.get_item_by_id, name="item_details"),
     path('create_item', views.create_item, name="create_item")
     #path('', views.index, name="item-categories")
+    #path('make_bid', v)
 ]

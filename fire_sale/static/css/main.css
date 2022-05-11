@@ -13,8 +13,6 @@ body{
 }
 /* ######################################################################################### */
 
-
-
 /* 2. NAVIGATION BAR ####################################################################### */
 .navbar-default{
     background-color: black;
@@ -102,6 +100,41 @@ img.item-img{
     text-align: left;
 }
 
+img.item-img{
+    float: left;
+}
+
+.container buy-btn{
+  display: inline-block; /* Make the buttons appear below each other */
+    font-family: "Apple Braille";
+}
+
+.buy-btn{
+    float: right;
+    border: 1px solid black;
+    padding: 10px 24px;
+    width: 10%;
+    height: 200px;
+    display: block;
+    font-family: "Apple Braille";
+}
+.buy-btn text{
+    font-family: "Apple Braille";
+    font-size: xx-large;
+    text-align: center;
+}
+.bid-btn{
+    float: right;
+    border: 1px solid black;
+    padding: 10px 24px;
+    width: 10%;
+    height: 200px;
+    display: block;
+}
+
+.container item-img{
+
+}
 .container item-img{
 
 }
