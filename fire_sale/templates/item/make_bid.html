@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    <form class="form form-horizontal" action="{% url 'make_bid' %}" method="post"></form>
+    <div>{{ item.name }}</div>
+    <form class="form form-horizontal" action="{% url 'make_bid' item_id=item.id %}" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Make Bid" class="btn btn-primary pull-right" style="clear:both; margin: 10px 0"/>
