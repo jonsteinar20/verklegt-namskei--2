@@ -23,7 +23,6 @@
               <li><a href="{% url 'login' %}">Login</a></li>
               <li><a href="{% url 'register' %}">Register</a></li>
           {% endif %}
-
         {% if user.is_authenticated %}
             <img src="{{ user.profile.profile_image }}" class="profile-image" />
         {% endif %}
