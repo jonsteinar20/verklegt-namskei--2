@@ -5,8 +5,8 @@ urlpatterns = [
     # http://localhost:8000/items // það sem er inni tomastrengnum
     path('', views.index, name="item-index"),
     path('<int:id>', views.get_item_by_id, name="item_details"),
-    #path(r'^$', views.get_item_by_id, name="item_details"),
     path('create_item', views.create_item, name="create_item"),
-    path('<int:item_id>/make_bid', views.make_bid, name="make_bid")
+    path('<int:item_id>/make_bid', views.make_bid, name="make_bid"),
+    path('my_listings', views.my_listings, name="my_listings")
     #path('', views.index, name="item-categories")
 ]

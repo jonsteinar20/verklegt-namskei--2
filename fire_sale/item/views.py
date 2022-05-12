@@ -5,6 +5,7 @@ from item.models import Item, ItemImage
 from item.forms.item_form import ItemCreateForm
 from item.forms.make_bid_form import MakeBidForm
 # Create your views here.
+from user.models import Profile
 
 
 def index(request):
@@ -114,6 +115,8 @@ def make_bid(request, item_id):
 
 @login_required
 def my_listings(request):
-    context = { 'items': Item.objects.all() }
-    return render(request, 'item/my_listings.html', context)
+    profile = Profile.objects.filter(user=request.user).first()
+    user_id = profile.user_id
+    context = {'items': Item.objects.filter(seller=user_id).order_by('name')}
+    return render(request, 'my_listings/index.html', context)
 
