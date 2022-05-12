@@ -13,10 +13,31 @@ def index(request):
         items = [ {
             'id': x.id,
             'name': x.name,
+            'price': x.price,
             'description': x.description,
             'firstImage': x.itemimage_set.first().image
         } for x in Item.objects.filter(name__contains=search_filter) ]
         return JsonResponse({ 'data': items })
+    elif 'order_by' in request.GET:
+        order_by = request.GET['order_by']
+        if order_by == 'Name':
+            items = [{
+                'id': x.id,
+                'name': x.name,
+                'description': x.description,
+                'price': x.price,
+                'firstImage': x.itemimage_set.first().image
+            } for x in Item.objects.all().order_by(order_by.lower())]
+            return JsonResponse({'data': items})
+        else:
+            items = [{
+                'id': x.id,
+                'name': x.name,
+                'description': x.description,
+                'price': x.price,
+                'firstImage': x.itemimage_set.first().image
+            } for x in Item.objects.all().order_by(order_by.lower())]
+            return JsonResponse({'data': items})
     context = { 'items': Item.objects.all().order_by('name') }
     return render(request, 'item/index.html', context)
 
@@ -38,7 +59,6 @@ def get_item_by_id(request, id):
 
 @login_required
 def create_item(request):
-
     if request.method == 'POST':
         form = ItemCreateForm(data=request.POST)
         if form.is_valid():
@@ -52,16 +72,23 @@ def create_item(request):
         'form': form
     })
 
-def make_bid(request):
+@login_required()
+def make_bid(request, item_id):
+    print("here")
     if request.method == 'POST':
         form = MakeBidForm(data=request.POST)
         if form.is_valid():
-            bid = form.save()
-            return redirect('item_details')
+            print("asdf")
+            bid = form.save(commit=False)
+            bid.buyer = request.user
+            bid.item = get_object_or_404(Item, pk=item_id)
+            bid.save()
+            return redirect('item_details', id=item_id)
     else:
-        form = MakeBidForm
+        form = MakeBidForm()
     return render(request, 'item/make_bid.html', {
-        'form': form
+        'form': form,
+        'item': get_object_or_404(Item, pk=item_id)
     })
 
 #def delete_item(request, id):
