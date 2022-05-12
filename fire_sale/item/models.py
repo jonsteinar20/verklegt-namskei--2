@@ -10,16 +10,19 @@ class ItemCategory(models.Model):
     def __str__(self):
         return self.name
 
+
 class Item(models.Model):
     name = models.CharField(max_length=255)
     description = models.CharField(max_length=255, blank=True)
-    price = models.FloatField()
+    price = models.PositiveIntegerField()
     category = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
     condition = models.CharField(max_length=255, blank=True)
     seller = models.ForeignKey(Profile, on_delete=models.CASCADE)
+    highest_offer = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name
+
 
 class ItemImage(models.Model):
     image = models.CharField(max_length=9999)
@@ -28,7 +31,8 @@ class ItemImage(models.Model):
     def __str__(self):
         return self.name
 
+
 class Offer(models.Model):
-    amount = models.FloatField()
+    amount = models.PositiveIntegerField()
     buyer = models.ForeignKey(User, on_delete=models.CASCADE)
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
