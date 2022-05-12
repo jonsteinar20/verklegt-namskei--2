@@ -51,6 +51,7 @@ def create_item(request):
         'form': form
     })
 
+<<<<<<< HEAD
 @login_required()
 def make_bid(request, item_id):
     print("here")
@@ -63,6 +64,9 @@ def make_bid(request, item_id):
             bid.item = get_object_or_404(Item, pk=item_id)
             bid.save()
             return redirect('item_details', id=item_id)
+=======
+
+>>>>>>> fb59c5508a2304f225c8288e6384e73663eb9e71
     else:
         form = MakeBidForm()
     return render(request, 'item/make_bid.html', {
