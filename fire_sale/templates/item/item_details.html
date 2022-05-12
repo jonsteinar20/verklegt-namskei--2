@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>{{ item.name }}</h1>
-    <p>{{ item.description }}</p>
-    <p>{{ item.price }}</p>
-    {% for item_image in item.itemimage_set.all %}
-        <img src="{{ item_image.image }}" class="item-img" />
-    {% endfor %}
-    <div class="container">
-        <button class="bid-btn" type="button"><a href="{% url 'make_bid' item_id=item.id %}">Make A Bid</a></button>
+    <div class="well items">
+        <div class="single_item_container">
+            <h1>{{ item.name }}</h1>
+            <p>{{ item.description }}</p>
+            <p>{{ item.price }} $ </p>
+            {% for item_image in item.itemimage_set.all %}
+                <img src="{{ item_image.image }}" class="item-img" />
+            {% endfor %}
+            <button class="bid-btn" type="button"><a href="{% url 'make_bid' item_id=item.id %}">Make A Bid</a></button>
+        </div>
     </div>
 {% endblock %}
