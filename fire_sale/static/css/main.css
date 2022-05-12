@@ -15,44 +15,7 @@ body{
 /* ######################################################################################### */
 
 /* 2. NAVIGATION BAR ####################################################################### */
-div.container-fluid{
-    background-image: linear-gradient(to bottom right, rgba(250, 112, 0, 0.8), rgba(255, 229, 0, 0.56));
-}
 
-.navbar-header{
-}
-
-nav navbar-nav{
-    width: 80%;
-}
-
-.navbar-default{
-}
-
-/* ???
-.navbar-brand{
-    margin: fill;
-    float: right;
-    color: white;
-    text-align: center;
-}*/
-
-.navbar-header:hover{
-    opacity: 0.9;
-    background: rgba(255, 255, 255, 0.16);
-    border-bottom: 4px solid orange;
-}
-
-.nav.navbar-nav li:hover{
-    opacity: 0.9;
-    opacity: 0.9;
-    background: rgba(255, 255, 255, 0.16);
-    border-bottom: 4px solid orange;
-}
-
-.nav.navbar profile-image{
-    height: 10px;
-}
 /* ######################################################################################### */
 /* ######################################################################################### */
 
@@ -85,27 +48,6 @@ l.item a:hover {
     text-align: center;
 }
 
-.container buy-btn{
-  display: inline-block; /* Make the buttons appear below each other */
-    font-family: "Apple Braille";
-}
-
-.buy-btn{
-    float: right;
-    border: 1px solid black;
-    padding: 10px 24px;
-    width: 10%;
-    height: 200px;
-    display: block;
-    font-family: "Apple Braille";
-}
-
-.buy-btn text{
-    font-family: "Apple Braille";
-    font-size: xx-large;
-    text-align: center;
-}
-
 .bid-btn{
     float: right;
     border: 1px solid black;
@@ -131,12 +73,6 @@ l.item a:hover {
     font-family: "Apple Braille";
     font-size: xx-large;
     text-align: center;
-    background-color: red;
-}
-
-.container p text{
-    display: flex;
-    text-align: right;
 }
 
 .container h1{
@@ -183,3 +119,30 @@ img.profile-image{
 }
 /* ######################################################################################### */
 /* ######################################################################################### */
+
+/* NEW NAVBAR */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, rgba(250, 112, 0, 0.8), rgba(255, 229, 0, 0.56));
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgba(255, 69, 0, 0.51);
+  border-bottom: 4px solid orange;
+}
