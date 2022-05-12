@@ -1,15 +1,21 @@
 /* ###########################################################################################
+ #############################################################################################
+ #############################################################################################
+ #############################################################################################
+ #############################################################################################
+
     STYLESHEET TABLE OF CONTENTS
         1. BODY
         2. NAVIGATION BAR
         3. Search bar
         4. Items
         5. CONTAINER
- ########################################################################################### */
 
-
-
-/* 1. BODY ################################################################################# */
+ ###########################################################################################
+ ###########################################################################################
+ ###########################################################################################
+ ###########################################################################################
+/* 1. BODY   ############################################################################### */
 body{
     height: 100%;
     background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 202, 0, 0.5)), to(rgba(255, 153, 52, 0.5))) fixed;
@@ -17,7 +23,11 @@ body{
 
 
 
-/* 2. NAVIGATION BAR ####################################################################### */
+/* 2. NAVIGATION BAR   ##################################################################### */
+nav-bar-div{
+    position: fixed;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -42,21 +52,36 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: rgba(255, 69, 0, 0.51);
-  border-bottom: 4px solid orange;
+  border-bottom: 4px solid #ffffff;
 }
 
 
 
-/* 3. Search bar in page items ############################################################# */
+/* 3. Search bar in page items   ########################################################### */
 .input-group{
-    padding-bottom: 4px;
+    font-size: x-large;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+}
+
+#search-box.form-control{
+    height: 36px;
+    width: 500px;
+}
+
+.input-group-btn {
+    width: 100px;
+    height: 40px;
+    float: right;
+    padding-left: 4px;
 }
 
 
 
-/* 4. Items #################################################################################*/
+/* 4. Items   ###############################################################################*/
 .items{
-    background-color: red;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -70,10 +95,8 @@ li a:hover {
     width: 563px;
 }
 
-.well.item{
-    display: inline-flex;
-    margin: auto;
-    border:solid red 8px;
+.well.items{
+    border: black 4px;
 }
 
 l.item a:hover {
@@ -88,36 +111,28 @@ l.item a:hover {
 
 .well.item a p{
     text-align: center;
+    border: black 10px;
 }
 
 .bid-btn{
-    float: right;
     border: 1px solid black;
-    padding: 10px 24px;
-    width: 10%;
-    height: 200px;
+    width: 200px;
+    height: 100px;
     display: block;
 }
 
-.container item-img{
-
+.single_item_container{
+    background-color: red;
+    width: 500px;
+    height: 400px;
+    font-size: larger;
 }
 
-.container item-img{
-
-}
-
-
-
-/* 5. CONTAINER ############################################################################ */
+/* 5. CONTAINER   ########################################################################## */
 .container_main{
-    /*font-family: "Apple Braille";
-    font-size: xx-large;
-    text-align: center;*/
-    border-top: solid green 5px;
-    border-bottom: solid green 5px;
-    border-right: solid green 5px;
-    border-left: solid green 5px;
+    border-bottom: solid white 5px;
+    border-right: solid white 5px;
+    border-left: solid white 5px;
     width: 80%;
     margin: auto;
 }
@@ -162,5 +177,5 @@ img.item-img{
 
 img.profile-image {
     height: 120px;
-    width: 120px;
+    width: 145px;
 }
