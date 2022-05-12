@@ -15,7 +15,7 @@
           <li><a href="{% url 'create_item' %}">Sell</a></li>
           <li><a href="#">Categories</a></li>
           <li><a href="#">My Listings</a></li>
-          <li><a href="#">My Bids</a></li>
+          <li><a href="{% url 'my_bids' %}">My Bids</a></li>
           {% if user.is_authenticated %}
               <li><a href="{% url 'profile' %}">Profile</a></li>
               <li><a href="{% url 'logout' %}">Logout</a></li>
