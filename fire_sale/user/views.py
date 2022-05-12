@@ -47,5 +47,9 @@ def profile(request):
     })
 
 def my_bids(request):
-    if request.method == 'GET':
-        return render(request, 'user/my_bids.html')
+    profile = Profile.objects.filter(user=request.user).first()
+    user_id = profile.user_id
+    context = {'items' : Item.objects.filter(offer__buyer_id = user_id)}
+    return render(request, 'user/my_bids.html', context)
+
+
