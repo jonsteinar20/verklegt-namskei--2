@@ -8,7 +8,7 @@
               <li><a href="{% url 'create_item' %}">Sell</a></li>
               <li><a href="#">Categories</a></li>
               <li><a href="{% url 'my_listings' %}">My Listings</a></li>
-              <li><a href="#">My Bids</a></li>
+              <li><a href="{% url 'my_bids' %}">My Bids</a></li>
                 {% if user.is_authenticated %}
                     <img style="float:right" src="{{ user.profile.profile_image }}" class="profile-image" />
                 {% endif %}
