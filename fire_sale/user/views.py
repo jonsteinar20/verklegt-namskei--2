@@ -3,6 +3,9 @@ from django.shortcuts import render, redirect
 from user.models import Profile
 from user.forms.profile_form import ProfileForm
 from user.forms.signup_form import SignUpForm
+from item.forms.make_bid_form import MakeBidForm
+from item.models import Item, Offer
+from item.views import make_bid
 
 
 #def register(request):
@@ -42,3 +45,11 @@ def profile(request):
     return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=profile)
     })
+
+def my_bids(request):
+    profile = Profile.objects.filter(user=request.user).first()
+    user_id = profile.user_id
+    context = {'items' : Item.objects.filter(offer__buyer_id = user_id)}
+    return render(request, 'user/my_bids.html', context)
+
+

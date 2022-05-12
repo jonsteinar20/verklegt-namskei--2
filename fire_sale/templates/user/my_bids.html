@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3 class="red">My Bids</h3>
+    <div class="items">
+    {% for item in items %}
+        {% include 'item/single_item.html' with item=item %}
+    {% endfor %}
+    </div>
+{% endblock %}
