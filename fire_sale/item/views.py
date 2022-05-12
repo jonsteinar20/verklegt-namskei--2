@@ -25,8 +25,8 @@ def index(request):
             items = [{
                 'id': x.id,
                 'name': x.name,
-                'description': x.description,
                 'price': x.price,
+                'description': x.description,
                 'firstImage': x.itemimage_set.first().image
             } for x in Item.objects.all().order_by(order_by.lower())]
             return JsonResponse({'data': items})
@@ -34,8 +34,8 @@ def index(request):
             items = [{
                 'id': x.id,
                 'name': x.name,
-                'description': x.description,
                 'price': x.price,
+                'description': x.description,
                 'firstImage': x.itemimage_set.first().image
             } for x in Item.objects.all().order_by(order_by.lower())]
             return JsonResponse({'data': items})

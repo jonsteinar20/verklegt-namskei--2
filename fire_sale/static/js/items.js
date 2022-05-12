@@ -39,6 +39,7 @@ $('#orderby').change(function(e) {
                                     <img class="item-img" src="${d.firstImage}" />
                                     <h4>${d.name}</h4>
                                     <p>${d.description}</p>
+                                    <p>${d.price}</p>
                                 </a>
                             </div>`
                 });
