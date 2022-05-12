@@ -38,7 +38,6 @@ def get_item_by_id(request, id):
 
 @login_required
 def create_item(request):
-
     if request.method == 'POST':
         form = ItemCreateForm(data=request.POST)
         if form.is_valid():
@@ -52,16 +51,23 @@ def create_item(request):
         'form': form
     })
 
-def make_bid(request):
+@login_required()
+def make_bid(request, item_id):
+    print("here")
     if request.method == 'POST':
         form = MakeBidForm(data=request.POST)
         if form.is_valid():
-            bid = form.save()
-            return redirect('item_details')
+            print("asdf")
+            bid = form.save(commit=False)
+            bid.buyer = request.user
+            bid.item = get_object_or_404(Item, pk=item_id)
+            bid.save()
+            return redirect('item_details', id=item_id)
     else:
-        form = MakeBidForm
+        form = MakeBidForm()
     return render(request, 'item/make_bid.html', {
-        'form': form
+        'form': form,
+        'item': get_object_or_404(Item, pk=item_id)
     })
 
 #def delete_item(request, id):
