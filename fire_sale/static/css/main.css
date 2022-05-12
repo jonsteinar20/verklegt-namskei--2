@@ -4,38 +4,57 @@
         2. NAVIGATION BAR
         3. ITEMS
         4. CONTAINER
+ ###########################################################################################
  ########################################################################################### */
 
-@import url("nav_bar.css");
 /* 1. BODY ################################################################################# */
 body{
-    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(255, 202, 0, 0.56));
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(250, 160, 43, 0.56));
 }
 /* ######################################################################################### */
+/* ######################################################################################### */
 
-/* 2. NAVIGATION BAR #######################################################################
-.navbar-default{
-    background-color: black;
+/* 2. NAVIGATION BAR ####################################################################### */
+div.container-fluid{
+    background-image: linear-gradient(to bottom right, rgba(250, 112, 0, 0.8), rgba(255, 229, 0, 0.56));
 }
 
+.navbar-header{
+}
+
+nav navbar-nav{
+    width: 80%;
+}
+
+.navbar-default{
+}
+
+/* ???
 .navbar-brand{
     margin: fill;
     float: right;
-    color: black;
+    color: white;
     text-align: center;
-}
+}*/
 
 .navbar-header:hover{
     opacity: 0.9;
-    background: black;
+    background: rgba(255, 255, 255, 0.16);
+    border-bottom: 4px solid orange;
 }
 
 .nav.navbar-nav li:hover{
     opacity: 0.9;
-    background:  black;
+    opacity: 0.9;
+    background: rgba(255, 255, 255, 0.16);
+    border-bottom: 4px solid orange;
 }
-######################################################################################### */
 
+.nav.navbar profile-image{
+    height: 10px;
+}
+/* ######################################################################################### */
+/* ######################################################################################### */
 
 
 /* 3. Items #################################################################################*/
@@ -65,8 +84,46 @@ l.item a:hover {
 .well.item a p{
     text-align: center;
 }
-/* ######################################################################################### */
 
+.container buy-btn{
+  display: inline-block; /* Make the buttons appear below each other */
+    font-family: "Apple Braille";
+}
+
+.buy-btn{
+    float: right;
+    border: 1px solid black;
+    padding: 10px 24px;
+    width: 10%;
+    height: 200px;
+    display: block;
+    font-family: "Apple Braille";
+}
+
+.buy-btn text{
+    font-family: "Apple Braille";
+    font-size: xx-large;
+    text-align: center;
+}
+
+.bid-btn{
+    float: right;
+    border: 1px solid black;
+    padding: 10px 24px;
+    width: 10%;
+    height: 200px;
+    display: block;
+}
+
+.container item-img{
+
+}
+
+.container item-img{
+
+}
+/* ######################################################################################### */
+/* ######################################################################################### */
 
 
 /* 4. CONTAINER ############################################################################ */
@@ -74,11 +131,12 @@ l.item a:hover {
     font-family: "Apple Braille";
     font-size: xx-large;
     text-align: center;
+    background-color: red;
 }
 
 .container p text{
     display: flex;
-    text-align: center;
+    text-align: right;
 }
 
 .container h1{
@@ -96,7 +154,6 @@ img.item-img{
 
 .input-group-btn:hover{
     opacity: 0.9;
-    background: purple;
 }
 
 .well.item a p{
@@ -111,11 +168,6 @@ img.item-img{
     float: left;
 }
 
-.container buy-btn{
-  display: inline-block; /* Make the buttons appear below each other */
-    font-family: "Apple Braille";
-}
-
 /*.bid-btn{
     float: right;
     border: 1px solid black;
@@ -125,13 +177,9 @@ img.item-img{
     display: block;
 }*/
 
-.container item-img{
-}
-
-.container item-img{
-}
-
 img.profile-image{
-    height: 60px;
-    width: 60px;
+    height: 120px;
+    width: 120px;
 }
+/* ######################################################################################### */
+/* ######################################################################################### */
