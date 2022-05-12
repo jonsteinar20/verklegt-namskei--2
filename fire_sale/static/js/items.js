@@ -10,7 +10,7 @@ $(document).ready(function() {
             success: function (resp) {
                 let newHtml = resp.data.map(d => {
                     return `<div class="well item">
-                                <a href="/items/$(d.id)">
+                                <a href="/items/${d.id}">
                                     <img class="item-img" src="${d.firstImage}" />
                                     <h4>${d.name}</h4>
                                     <p>${d.description}</p>
