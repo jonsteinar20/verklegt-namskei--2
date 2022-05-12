@@ -8,7 +8,9 @@ class ItemCreateForm(ModelForm):
     image = forms.CharField(required=True, widget=forms.TextInput(attrs={'class': 'form-control'}))
     class Meta:
         model = Item
-        exclude = ['id', 'seller_id', 'highest_offer']
+
+        exclude = ['id','highest_offer']
+
         widgets = {
             'name': widgets.TextInput(attrs={'class': 'form-control'}),
             'description': widgets.TextInput(attrs={'class': 'form-control'}),

@@ -2,37 +2,78 @@
     STYLESHEET TABLE OF CONTENTS
         1. BODY
         2. NAVIGATION BAR
-        3. ITEMS
-        4. CONTAINER
- ###########################################################################################
+        3. Search bar
+        4. Items
+        5. CONTAINER
  ########################################################################################### */
+
+
 
 /* 1. BODY ################################################################################# */
 body{
-    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(250, 160, 43, 0.56));
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 202, 0, 0.5)), to(rgba(255, 153, 52, 0.5))) fixed;
 }
-/* ######################################################################################### */
-/* ######################################################################################### */
+
+
 
 /* 2. NAVIGATION BAR ####################################################################### */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, rgba(250, 112, 0, 0.8), rgba(255, 229, 0, 0.56));
+  border-bottom: solid 4px white;
+}
 
-/* ######################################################################################### */
-/* ######################################################################################### */
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: rgba(255, 69, 0, 0.51);
+  border-bottom: 4px solid orange;
+}
 
 
-/* 3. Items #################################################################################*/
+
+/* 3. Search bar in page items ############################################################# */
+.input-group{
+    padding-bottom: 4px;
+}
+
+
+
+/* 4. Items #################################################################################*/
+.items{
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
 .item {
     border-bottom: solid 2px rgba(155, 155, 155, .5);
     text-align: center;
-    border: 2px solid black;
     height: 360px;
     width: 563px;
 }
 
 .well.item{
     display: inline-flex;
-    position: center ;
     margin: auto;
+    border:solid red 8px;
 }
 
 l.item a:hover {
@@ -42,6 +83,7 @@ l.item a:hover {
 
 .well.item a {
     width:4600px;
+    padding: 5px;
 }
 
 .well.item a p{
@@ -64,15 +106,20 @@ l.item a:hover {
 .container item-img{
 
 }
-/* ######################################################################################### */
-/* ######################################################################################### */
 
 
-/* 4. CONTAINER ############################################################################ */
-.container{
-    font-family: "Apple Braille";
+
+/* 5. CONTAINER ############################################################################ */
+.container_main{
+    /*font-family: "Apple Braille";
     font-size: xx-large;
-    text-align: center;
+    text-align: center;*/
+    border-top: solid green 5px;
+    border-bottom: solid green 5px;
+    border-right: solid green 5px;
+    border-left: solid green 5px;
+    width: 80%;
+    margin: auto;
 }
 
 .container h1{
@@ -113,36 +160,7 @@ img.item-img{
     display: block;
 }*/
 
-img.profile-image{
+img.profile-image {
     height: 120px;
     width: 120px;
-}
-/* ######################################################################################### */
-/* ######################################################################################### */
-
-/* NEW NAVBAR */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-image: linear-gradient(to bottom right, rgba(250, 112, 0, 0.8), rgba(255, 229, 0, 0.56));
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: rgba(255, 69, 0, 0.51);
-  border-bottom: 4px solid orange;
 }
