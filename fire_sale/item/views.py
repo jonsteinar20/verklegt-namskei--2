@@ -17,6 +17,24 @@ def index(request):
             'firstImage': x.itemimage_set.first().image
         } for x in Item.objects.filter(name__contains=search_filter) ]
         return JsonResponse({ 'data': items })
+    elif 'order_by' in request.GET:
+        order_by = request.GET['order_by']
+        if order_by == 'Name':
+            items = [{
+                'id': x.id,
+                'name': x.name,
+                'description': x.description,
+                'firstImage': x.itemimage_set.first().image
+            } for x in Item.objects.all().order_by(order_by.lower())]
+            return JsonResponse({'data': items})
+        else:
+            items = [{
+                'id': x.id,
+                'name': x.name,
+                'description': x.description,
+                'firstImage': x.itemimage_set.first().image
+            } for x in Item.objects.all().order_by(order_by.lower())]
+            return JsonResponse({'data': items})
     context = { 'items': Item.objects.all().order_by('name') }
     return render(request, 'item/index.html', context)
 
