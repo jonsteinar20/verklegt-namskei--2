@@ -13,6 +13,15 @@ https://github.com/jonsteinar20/verklegt-namskei--2
 https://github.com/jonsteinar20/verklegt-namskei--2.git
 Run pip freeze > requirements.txt
 Run pip install -r requirements.txt
+Run this for population of sql:
+INSERT INTO item_itemcategory (name) VALUES('Electronics');
+INSERT INTO item_itemcategory (name) VALUES('Shoes');
+INSERT INTO item_itemcategory (name) VALUES('Clothes');
+INSERT INTO item_itemcategory (name) VALUES('Accessories');
+INSERT INTO item_itemcategory (name) VALUES('Books');
+INSERT INTO item_itemcategory (name) VALUES('Toys and Games');
+INSERT INTO item_itemcategory (name) VALUES('Home supplies');
+INSERT INTO item_itemcategory (name) VALUES('Other');
 
 Credits:
 Jón Steinar - jonsteinar20
