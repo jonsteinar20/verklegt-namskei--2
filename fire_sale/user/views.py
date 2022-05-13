@@ -58,20 +58,24 @@ def my_bids(request):
 
 def contact_info(request):
     if request.method == 'POST':
-        print(1)
+        form = ContactInfoForm(data=request.POST)
+        if form.is_valid():
+            return redirect('payment')
     else:
         form = ContactInfoForm()
     return render(request, 'user/contact_info.html', {
-        'form' : form
+        'form': ContactInfoForm()
     })
 
 def payment(request):
     if request.method == 'POST':
-        print(1)
+        form = PaymentForm(data=request.POST)
+        if form.is_valid():
+            return redirect('item-index')
     else:
         form = PaymentForm()
     return render(request, 'user/payment.html', {
-        'form' : form
+        'form' : PaymentForm()
     })
 
 
