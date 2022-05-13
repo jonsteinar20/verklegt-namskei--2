@@ -1,9 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
-from item.models import Item, ItemImage
+from item.models import Item, ItemImage, Category, CategoryImage
 from item.forms.item_form import ItemCreateForm
 from item.forms.make_bid_form import MakeBidForm
+from django.core.mail import send_mail
 # Create your views here.
 from user.models import Profile
 
@@ -54,8 +55,11 @@ def filter_by_name(request):
 
 
 def get_item_by_id(request, id):
+    the_item = get_object_or_404(Item, pk=id)
+
     return render(request, 'item/item_details.html', {
-        'item': get_object_or_404(Item, pk=id)
+        'item': get_object_or_404(Item, pk=id),
+        'items': Item.objects.filter(category__id=the_item.category_id)
     })
 
 
@@ -76,14 +80,14 @@ def create_item(request):
 
 @login_required()
 def make_bid(request, item_id):
-    print("here")
     if request.method == 'POST':
         form = MakeBidForm(data=request.POST)
         if form.is_valid():
-            print("asdf")
             bid = form.save(commit=False)
             bid.buyer = request.user
             bid.item = get_object_or_404(Item, pk=item_id)
+            if bid.amount > bid.item.highest_offer:
+                bid.item.highest_offer = bid.amount
             bid.save()
             return redirect('item_details', id=item_id)
     else:
@@ -93,10 +97,23 @@ def make_bid(request, item_id):
         'item': get_object_or_404(Item, pk=item_id)
     })
 
+
+def send_mail(request, id):
+    buyer = request.user
+    item = request.item.name
+    send_mail('Dear ' + buyer + ', your bid was accepted for item ', item, fail_silently=False)
+
+
+def categories(request):
+    context = { 'categories', Category.objects.all() }
+    return render(request, 'category/index.html', context)
+
+
 #def delete_item(request, id):
     #item = get_object_or_404(Item, pk=id)
     #item.delete()
     #return redirect('item-index')
+
 
 #def update_item(request, id):
     #instance = get_object_or_404(Item, pk=id)

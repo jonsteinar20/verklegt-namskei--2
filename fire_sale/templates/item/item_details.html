@@ -10,5 +10,10 @@
             {% endfor %}
             <button class="bid-btn" type="button"><a href="{% url 'make_bid' item_id=item.id %}">Make A Bid</a></button>
         </div>
+        <div class="items">
+            {% for item in items %}
+                {% include 'item/single_item.html' with item=item %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

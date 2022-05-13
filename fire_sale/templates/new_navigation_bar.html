@@ -17,6 +17,7 @@
               {% if user.is_authenticated %}
                   <li style="float:right"><a href="{% url 'profile' %}">Profile</a></li>
                   <li style="float:right"><a href="{% url 'logout' %}">Logout</a></li>
+                  <li style="float:right"><a href="{% url 'contact_info' %}">Checkout</a></li>
               {% else %}
                   <li><a href="{% url 'login' %}">Login</a></li>
                   <li><a href="{% url 'register' %}">Register</a></li>
