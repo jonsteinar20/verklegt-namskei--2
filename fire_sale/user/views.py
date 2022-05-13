@@ -7,6 +7,8 @@ from item.forms.make_bid_form import MakeBidForm
 from item.models import Item, Offer
 from item.views import make_bid
 from django.contrib.auth.decorators import login_required
+from user.forms.contact_info import ContactInfoForm
+from user.forms.payment import PaymentForm
 
 
 #def register(request):
@@ -54,6 +56,23 @@ def my_bids(request):
     return render(request, 'user/my_bids.html', context)
 
 
+def contact_info(request):
+    if request.method == 'POST':
+        print(1)
+    else:
+        form = ContactInfoForm()
+    return render(request, 'user/contact_info.html', {
+        'form' : form
+    })
+
+def payment(request):
+    if request.method == 'POST':
+        print(1)
+    else:
+        form = PaymentForm()
+    return render(request, 'user/payment.html', {
+        'form' : form
+    })
 
 
 
