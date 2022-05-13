@@ -4,6 +4,7 @@ from django.http import HttpResponse, JsonResponse
 from item.models import Item, ItemImage
 from item.forms.item_form import ItemCreateForm
 from item.forms.make_bid_form import MakeBidForm
+from django.core.mail import send_mail
 # Create your views here.
 from user.models import Profile
 
@@ -82,8 +83,8 @@ def make_bid(request, item_id):
             bid = form.save(commit=False)
             bid.buyer = request.user
             bid.item = get_object_or_404(Item, pk=item_id)
-            if bid.amount > Item.highest_offer:
-               Item.highest_offer = bid.amount
+            if bid.amount > bid.item.highest_offer:
+                bid.item.highest_offer = bid.amount
             bid.save()
             return redirect('item_details', id=item_id)
     else:
@@ -93,10 +94,18 @@ def make_bid(request, item_id):
         'item': get_object_or_404(Item, pk=item_id)
     })
 
+
+def send_mail(request, id):
+    buyer = request.user
+    item = request.item.name
+    send_mail('Dear ' + buyer + ', your bid was accepted for item ', item, fail_silently=False)
+
+
 #def delete_item(request, id):
     #item = get_object_or_404(Item, pk=id)
     #item.delete()
     #return redirect('item-index')
+
 
 #def update_item(request, id):
     #instance = get_object_or_404(Item, pk=id)
