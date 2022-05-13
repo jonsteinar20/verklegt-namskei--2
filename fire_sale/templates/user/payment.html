@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-        <h1>Please fill your payment information</h1>
+        <h1>Please fill in your payment information</h1>
         <form class="form form-horizontal" action="{% url 'payment' %}" method="post">
         {% csrf_token %}
         {{ form }}
