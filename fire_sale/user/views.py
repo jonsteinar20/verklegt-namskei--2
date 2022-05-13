@@ -33,7 +33,6 @@ def register(request):
         'form': SignUpForm()
     })
 
-
 def profile(request):
     profile = Profile.objects.filter(user=request.user).first()
     if request.method == 'POST':
@@ -46,6 +45,7 @@ def profile(request):
     return render(request, 'user/profile.html', {
         'form': ProfileForm(instance=profile)
     })
+
 @login_required
 def my_bids(request):
     profile = Profile.objects.filter(user=request.user).first()
