@@ -21,8 +21,6 @@ body{
     background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 202, 0, 0.5)), to(rgba(255, 153, 52, 0.5))) fixed;
 }
 
-
-
 /* 2. NAVIGATION BAR   ##################################################################### */
 nav-bar-div{
     position: fixed;
@@ -54,9 +52,6 @@ li a:hover {
   background-color: rgba(255, 69, 0, 0.51);
   border-bottom: 4px solid #ffffff;
 }
-
-
-
 /* 3. Search bar in page items   ########################################################### */
 .input-group{
     font-size: x-large;
@@ -77,11 +72,9 @@ li a:hover {
     padding-left: 4px;
 }
 
-
-
 /* 4. Items   ###############################################################################*/
 .items{
-    background-color: white;
+    background-color: white ;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -97,6 +90,7 @@ li a:hover {
 
 .well.items{
     border: black 4px;
+    background-color: white;
 }
 
 l.item a:hover {
@@ -116,23 +110,27 @@ l.item a:hover {
 
 .bid-btn{
     border: 1px solid black;
-    width: 200px;
-    height: 100px;
+    width: 125px;
+    height: 60px;
     display: block;
+    float: right;
+    margin-top: 152px;
+
 }
 
 .single_item_container{
-    background-color: red;
+    background-color: white;
     width: 500px;
     height: 400px;
     font-size: larger;
 }
 
+.single_item_container text{
+    color: black;
+}
+
 /* 5. CONTAINER   ########################################################################## */
 .container_main{
-    border-bottom: solid white 5px;
-    border-right: solid white 5px;
-    border-left: solid white 5px;
     width: 80%;
     margin: auto;
 }
@@ -164,6 +162,7 @@ img.item-img{
 
 img.item-img{
     float: left;
+    border: solid black 1px;
 }
 
 /*.bid-btn{
@@ -176,6 +175,59 @@ img.item-img{
 }*/
 
 img.profile-image {
-    height: 120px;
-    width: 145px;
+    height: 60px;
+    width: 70px;
 }
+
+.single_item_container h1{
+    text-align: center;
+}
+
+.single_item_container p{
+    text-align: center;
+}
+
+img.item-img{
+    float: left;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
