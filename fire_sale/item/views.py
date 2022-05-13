@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
-from item.models import Item, ItemImage, Category, CategoryImage
+from item.models import Item, ItemImage
 from item.forms.item_form import ItemCreateForm
 from item.forms.make_bid_form import MakeBidForm
 from django.core.mail import send_mail
