@@ -9,6 +9,9 @@
               <li><a href="#">Categories</a></li>
               <li><a href="{% url 'my_listings' %}">My Listings</a></li>
               <li><a href="{% url 'my_bids' %}">My Bids</a></li>
+                <div class="fa fa-star">
+                <li><a href="#">Avarage rating</a></li>
+                </div>
                 {% if user.is_authenticated %}
                     <img style="float:right" src="{{ user.profile.profile_image }}" class="profile-image" />
                 {% endif %}
