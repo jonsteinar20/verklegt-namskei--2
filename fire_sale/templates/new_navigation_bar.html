@@ -10,9 +10,6 @@
               <li><a href="#">Categories</a></li>
               <li><a href="{% url 'my_listings' %}">My Listings</a></li>
               <li><a href="{% url 'my_bids' %}">My Bids</a></li>
-        <div class="rating" >
-            <li><a >My rating:</a></li>
-        </div>
 
                 {% if user.is_authenticated %}
                     <img style="float:right" src="{{ user.profile.profile_image }}" class="profile-image" />
@@ -21,6 +18,12 @@
                   <li style="float:right"><a href="{% url 'profile' %}">Profile</a></li>
                   <li style="float:right"><a href="{% url 'logout' %}">Logout</a></li>
                   <li style="float:right"><a href="{% url 'contact_info' %}">Checkout</a></li>
+                    <li class="ratings">My Rating:
+                    <span class="fa fa-star checked">
+                    </span> <span class="fa fa-star checked"> </span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span></li>
               {% else %}
                   <li><a href="{% url 'login' %}">Login</a></li>
                   <li><a href="{% url 'register' %}">Register</a></li>

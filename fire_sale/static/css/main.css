@@ -193,5 +193,15 @@ img.item-img{
 }
 
 .checked {
-  color: orange;
+  color: black;
+}
+
+li.ratings{
+    display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+
+
 }
