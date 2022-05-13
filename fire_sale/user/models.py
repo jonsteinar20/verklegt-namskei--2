@@ -12,13 +12,20 @@ class Profile(models.Model):
     def __str__(self):
         return self.name
 
-class Checkout(models.Model):
-    full_name = models.CharField(max_length=999)
-    address = models.CharField(max_length=999)
-    city = models.CharField(max_length=999)
-    country = models.CharField(max_length=999)
-    postal_code = models.CharField(max_length=999)
-    name_on_card = models.CharField(max_length=999)
-    card_number = models.PositiveIntegerField(max_length=16)
-    exp_date = models.PositiveIntegerField(max_length=4)
-    cvc = models.PositiveIntegerField(max_length=3)
+
+class ContactInfo(models.Model):
+    contact_id = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    country = models.CharField(max_length=255)
+    postal_code = models.PositiveIntegerField()
+
+class Payment(models.Model):
+    payment_id = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
+    card_number = models.PositiveIntegerField()
+    exp_date = models.PositiveIntegerField()
+    cvc = models.PositiveIntegerField()
+
+
