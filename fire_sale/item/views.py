@@ -85,6 +85,8 @@ def make_bid(request, item_id):
             bid.buyer = request.user
             bid.item = get_object_or_404(Item, pk=item_id)
             bid.save()
+            if bid.amount > Item.highest_offer:
+                Item.highest_offer = bid.amount
             return redirect('item_details', id=item_id)
     else:
         form = MakeBidForm()
