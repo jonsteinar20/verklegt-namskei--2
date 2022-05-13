@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
-from item.models import Item, ItemImage
+from item.models import Item, ItemImage, Category, CategoryImage
 from item.forms.item_form import ItemCreateForm
 from item.forms.make_bid_form import MakeBidForm
 from django.core.mail import send_mail
@@ -99,6 +99,11 @@ def send_mail(request, id):
     buyer = request.user
     item = request.item.name
     send_mail('Dear ' + buyer + ', your bid was accepted for item ', item, fail_silently=False)
+
+
+def categories(request):
+    context = { 'categories', Category.objects.all() }
+    return render(request, 'category/index.html', context)
 
 
 #def delete_item(request, id):

@@ -12,8 +12,10 @@ class ItemCreateForm(ModelForm):
         exclude = ['id','highest_offer']
 
         widgets = {
-            'name': widgets.TextInput(attrs={'class': 'form-control'}),
-            'description': widgets.TextInput(attrs={'class': 'form-control'}),
-            'price': widgets.NumberInput(attrs={'class': 'form-control'}),
-            'condition': widgets.TextInput(attrs={'class': 'form-control'})
+            'full_name': widgets.TextInput(attrs={'class': 'form-control'}),
+            'address': widgets.TextInput(attrs={'class': 'form-control'}),
+            'city': widgets.TextInput(attrs={'class': 'form-control'}),
+            'country': widgets.TextInput(attrs={'class': 'form-control'}),
+            'postal_code': widgets.NumberInput(attrs={'class': 'form-control'}),
         }
+

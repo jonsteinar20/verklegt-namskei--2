@@ -37,3 +37,11 @@ class Offer(models.Model):
     buyer = models.ForeignKey(User, on_delete=models.CASCADE)
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
 
+
+class Category(models.Model):
+    name = models.CharField(max_length=255)
+
+
+class CategoryImage(models.Model):
+    image = models.CharField(max_length=9999)
+    item = models.ForeignKey(Category, on_delete=models.CASCADE)
