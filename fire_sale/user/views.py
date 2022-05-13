@@ -53,14 +53,7 @@ def my_bids(request):
     context = {'items' : Item.objects.filter(offer__buyer_id = user_id)}
     return render(request, 'user/my_bids.html', context)
 
-def checkout(request):
-    if request.method == 'POST':
-        print(1)
-    else:
-        print(2)
-    return render(request, 'user/checkout.html', {
-        'form' : form
-    })
+
 
 
 
