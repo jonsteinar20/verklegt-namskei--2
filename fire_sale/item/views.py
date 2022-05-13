@@ -55,8 +55,11 @@ def filter_by_name(request):
 
 
 def get_item_by_id(request, id):
+    the_item = get_object_or_404(Item, pk=id)
+
     return render(request, 'item/item_details.html', {
-        'item': get_object_or_404(Item, pk=id)
+        'item': get_object_or_404(Item, pk=id),
+        'items': Item.objects.filter(category__id=the_item.category_id)
     })
 
 
