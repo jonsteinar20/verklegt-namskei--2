@@ -9,6 +9,7 @@ from item.views import make_bid
 from django.contrib.auth.decorators import login_required
 from user.forms.contact_info import ContactInfoForm
 from user.forms.payment import PaymentForm
+from user.forms.review import ReviewForm
 
 
 #def register(request):
@@ -71,11 +72,22 @@ def payment(request):
     if request.method == 'POST':
         form = PaymentForm(data=request.POST)
         if form.is_valid():
-            return redirect('item-index')
+            return redirect('review')
     else:
         form = PaymentForm()
     return render(request, 'user/payment.html', {
         'form' : PaymentForm()
+    })
+
+def review(request):
+    if request.method == 'POST':
+        form = ReviewForm(data=request.POST)
+        if form.is_valid():
+            return redirect('item-index')
+    else:
+        form = ReviewForm()
+    return render(request, 'user/review.html', {
+        'form' : ReviewForm()
     })
 
 
