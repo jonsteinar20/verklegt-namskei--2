@@ -121,8 +121,11 @@ l.item a:hover {
 .single_item_container{
     background-color: white;
     width: 500px;
-    height: 500px;
+    height: 450px;
     font-size: larger;
+}
+.checked{
+    color: black;
 }
 
 .single_item_container text{
