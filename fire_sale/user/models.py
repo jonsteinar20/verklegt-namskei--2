@@ -28,4 +28,7 @@ class Payment(models.Model):
     exp_date = models.PositiveIntegerField()
     cvc = models.PositiveIntegerField()
 
+class Review(models.Model):
+    review_id = models.CharField(max_length=99)
+    rating = models.PositiveIntegerField()
 
