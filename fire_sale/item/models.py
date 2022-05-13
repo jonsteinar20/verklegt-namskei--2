@@ -36,3 +36,4 @@ class Offer(models.Model):
     amount = models.PositiveIntegerField()
     buyer = models.ForeignKey(User, on_delete=models.CASCADE)
     item = models.ForeignKey(Item, on_delete=models.CASCADE)
+
