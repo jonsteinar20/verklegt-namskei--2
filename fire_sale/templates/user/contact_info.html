@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-        <h1>Please fill in your shipping information</h1>
-        <form class="form form-horizontal" action="{% url 'contact_info' %}" method="post">
+    <h1>Please fill in your shipping information</h1>
+    <form class="form form-horizontal" action="{% url 'contact_info' %}" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit" value="Next" class="btn btn-primary pull-right" onclick="{% url 'payment' %}" style="clear:both; margin: 10px 0"/>
-        </form>
+    </form>
 {% endblock %}
