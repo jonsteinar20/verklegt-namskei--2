@@ -18,7 +18,7 @@ class Item(models.Model):
     category = models.ForeignKey(ItemCategory, on_delete=models.CASCADE)
     condition = models.CharField(max_length=255, blank=True)
     seller = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    highest_offer = models.PositiveIntegerField(default=0)
+    highest_offer = models.PositiveIntegerField(default=0, editable=True)
 
     def __str__(self):
         return self.name
