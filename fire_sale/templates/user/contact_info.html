@@ -4,6 +4,6 @@
         <form class="form form-horizontal" action="{% url 'contact_info' %}" method="post">
         {% csrf_token %}
         {{ form }}
-        <input type="submit" value="Next" class="btn btn-primary pull-right" onclick="{% url 'item-index' %}" style="clear:both; margin: 10px 0"/>
+        <input type="submit" value="Next" class="btn btn-primary pull-right" onclick="{% url 'payment' %}" style="clear:both; margin: 10px 0"/>
         </form>
 {% endblock %}
