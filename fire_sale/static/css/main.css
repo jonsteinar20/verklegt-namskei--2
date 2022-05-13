@@ -192,3 +192,6 @@ img.item-img{
     float: left;
 }
 
+.checked {
+  color: orange;
+}
