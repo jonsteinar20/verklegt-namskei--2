@@ -6,9 +6,9 @@
     {% for item in items %}
         <div>
             {% include 'item/single_item.html' with item=item %}
-            {% for offer in offers %}
-                <button type="button" id="accept-btn" class="btn btn-default">Accept</button>
-            {% endfor %}
+            {% if item.highest_offer > 0 %}
+                <button type="button" id="accept-btn" class="btn btn-default">Accept bid for {{ item.highest_offer }}</button>
+            {% endif %}
         </div>
     {% endfor %}
     </div>
