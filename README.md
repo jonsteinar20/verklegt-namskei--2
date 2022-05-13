@@ -1,11 +1,13 @@
 # verklegt-namskei--2
 TITLE:
-Fire Sale - It is a website similar to the US based website Craigslist.com where people auction their own items and bid on other peoples items.
+Tombola - It is a website similar to the US based website Craigslist.com where people auction their own items and bid on other peoples items.
 
 PROJECT DESCRIPTION:
-In this application you can view all items that have been put up to auction by people of the site.
-You can create an account and from there you can auction off your very own items.
-Every item has an image of itself and a detailed description along with a condition state of the item.
+For this assignment we had to create a platform on which users can purchase and sell items between them selves. 
+On the site users are able to create an account through whicvh they will be able to put up items, along with 
+details of the item such as images and condition as well as the requested price. Other users will be able to bid 
+for the item upon which the seller of the item can accept the bid. The buyer then gives his information and the 
+two parties are able to make an exchange.
 
 HOW TO INSTALL AND RUN THE PROJECT:
 Clone the repo.
