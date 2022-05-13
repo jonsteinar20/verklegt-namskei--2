@@ -6,6 +6,7 @@ from user.forms.signup_form import SignUpForm
 from item.forms.make_bid_form import MakeBidForm
 from item.models import Item, Offer
 from item.views import make_bid
+from django.contrib.auth.decorators import login_required
 
 
 #def register(request):
@@ -32,7 +33,6 @@ def register(request):
         'form': SignUpForm()
     })
 
-
 def profile(request):
     profile = Profile.objects.filter(user=request.user).first()
     if request.method == 'POST':
@@ -46,10 +46,21 @@ def profile(request):
         'form': ProfileForm(instance=profile)
     })
 
+@login_required
 def my_bids(request):
     profile = Profile.objects.filter(user=request.user).first()
     user_id = profile.user_id
     context = {'items' : Item.objects.filter(offer__buyer_id = user_id)}
     return render(request, 'user/my_bids.html', context)
+
+def checkout(request):
+    if request.method == 'POST':
+        print(1)
+    else:
+        print(2)
+    return render(request, 'user/checkout.html', {
+        'form' : form
+    })
+
 
 

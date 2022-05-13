@@ -76,14 +76,14 @@ def create_item(request):
 
 @login_required()
 def make_bid(request, item_id):
-    print("here")
     if request.method == 'POST':
         form = MakeBidForm(data=request.POST)
         if form.is_valid():
-            print("asdf")
             bid = form.save(commit=False)
             bid.buyer = request.user
             bid.item = get_object_or_404(Item, pk=item_id)
+            if bid.amount > Item.highest_offer:
+               Item.highest_offer = bid.amount
             bid.save()
             return redirect('item_details', id=item_id)
     else:
